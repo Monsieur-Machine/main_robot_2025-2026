@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "binary_info.h": "c",
+        "i2c.h": "c",
+        "stdlib.h": "c",
+        "stdint.h": "c",
+        "gyro.h": "c",
+        "motors.h": "c",
+        "motion_control.h": "c",
+        "i2c_master.h": "c",
+        "udp_client.h": "c",
+        "udp_payload.h": "c",
+        "udp.h": "c",
+        "opt.h": "c",
+        "cyw43_arch.h": "c",
+        "wifi_operator.h": "c"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "binary_info.h": "c",
+        "i2c.h": "c",
+        "time.h": "c",
+        "stdlib.h": "c",
+        "robot.h": "c",
+        "stdio.h": "c",
+        "i2c_buffer.h": "c",
+        "motors.h": "c"
+    }
+}

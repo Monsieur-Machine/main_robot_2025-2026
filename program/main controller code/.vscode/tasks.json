@@ -1,0 +1,25 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "command": "cd build; cmake -DPICO_BOARD=pico_w ..; make",
+            "label": "CMake in build/",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "command": "cd build; cmake -DPICO_BOARD=pico_w ..; make Flash",
+            "label": "CMake & Make & Flash",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

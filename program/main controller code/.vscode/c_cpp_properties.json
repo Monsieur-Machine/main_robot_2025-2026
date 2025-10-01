@@ -1,0 +1,33 @@
+{
+    "env": {
+        "myDefaultIncludePath": [
+            "${workspaceFolder}/src/include/",
+            "${env:PICO_SDK_PATH}/src/**/include/",
+            "${env:PICO_SDK_PATH}/lib/**/include/",
+            "${workspaceFolder}/build/generated/pico_base/"
+        ],
+        "myCompilerPath": "/usr/bin/arm-none-eabi-gcc"
+    },
+
+    "configurations": [
+        {
+            "name": "Linux",
+            "intelliSenseMode": "linux-gcc-arm",
+            "includePath": [
+                "${myDefaultIncludePath}"
+            ],
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
