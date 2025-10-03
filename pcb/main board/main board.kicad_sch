@@ -1800,6 +1800,379 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Driver_Motor:Pololu_Breakout_A4988"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "A"
+				(at -2.54 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "Pololu_Breakout_A4988"
+				(at -2.54 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" "Module:Pololu_Breakout-16_15.2x20.3mm"
+				(at 6.985 -19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.pololu.com/product/2980/pictures"
+				(at 2.54 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Pololu Breakout Board, Stepper Driver A4988"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Pololu Breakout Board Stepper Driver A4988"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pololu*Breakout*15.2x20.3mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Pololu_Breakout_A4988_0_1"
+				(rectangle
+					(start 10.16 -17.78)
+					(end -7.62 15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Pololu_Breakout_A4988_1_1"
+				(pin input line
+					(at -10.16 10.16 0)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "~{SLEEP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "~{ENABLE}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "STEP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "MS1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "MS2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -12.7 0)
+					(length 2.54)
+					(name "MS3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 17.78 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -20.32 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 17.78 270)
+					(length 2.54)
+					(name "VMOT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 -20.32 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "1B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "1A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -2.54 180)
+					(length 2.54)
+					(name "2A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -5.08 180)
+					(length 2.54)
+					(name "2B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Interface_Expansion:MCP23017_SO"
 			(pin_names
 				(offset 1.016)
@@ -6388,7 +6761,7 @@
 	)
 	(wire
 		(pts
-			(xy 384.81 152.4) (xy 382.27 152.4)
+			(xy 34.29 118.11) (xy 36.83 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6408,7 +6781,7 @@
 	)
 	(wire
 		(pts
-			(xy 384.81 149.86) (xy 382.27 149.86)
+			(xy 34.29 115.57) (xy 36.83 115.57)
 		)
 		(stroke
 			(width 0)
@@ -7208,7 +7581,7 @@
 	)
 	(wire
 		(pts
-			(xy 382.27 173.99) (xy 384.81 173.99)
+			(xy 36.83 139.7) (xy 34.29 139.7)
 		)
 		(stroke
 			(width 0)
@@ -7368,7 +7741,7 @@
 	)
 	(wire
 		(pts
-			(xy 384.81 171.45) (xy 382.27 171.45)
+			(xy 34.29 137.16) (xy 36.83 137.16)
 		)
 		(stroke
 			(width 0)
@@ -7778,7 +8151,7 @@
 	)
 	(wire
 		(pts
-			(xy 382.27 147.32) (xy 384.81 147.32)
+			(xy 36.83 113.03) (xy 34.29 113.03)
 		)
 		(stroke
 			(width 0)
@@ -7938,7 +8311,7 @@
 	)
 	(wire
 		(pts
-			(xy 382.27 166.37) (xy 384.81 166.37)
+			(xy 36.83 132.08) (xy 34.29 132.08)
 		)
 		(stroke
 			(width 0)
@@ -8048,7 +8421,7 @@
 	)
 	(wire
 		(pts
-			(xy 384.81 168.91) (xy 382.27 168.91)
+			(xy 34.29 134.62) (xy 36.83 134.62)
 		)
 		(stroke
 			(width 0)
@@ -8228,7 +8601,7 @@
 	)
 	(wire
 		(pts
-			(xy 382.27 154.94) (xy 384.81 154.94)
+			(xy 36.83 120.65) (xy 34.29 120.65)
 		)
 		(stroke
 			(width 0)
@@ -8620,22 +8993,22 @@
 	)
 	(global_label "I2C 1 SCL"
 		(shape input)
-		(at 382.27 171.45 180)
+		(at 36.83 137.16 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "251f49fb-eee4-4ac3-ac5f-535281e7404d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 369.5482 171.45 0)
+			(at 49.5518 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8730,22 +9103,22 @@
 	)
 	(global_label "I2C 1 SDA"
 		(shape input)
-		(at 382.27 168.91 180)
+		(at 36.83 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "6f9ea9e3-f29d-4819-a5cf-c1b5349b5253")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 369.4877 168.91 0)
+			(at 49.6123 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8840,22 +9213,22 @@
 	)
 	(global_label "I2C 0 SCL"
 		(shape input)
-		(at 382.27 152.4 180)
+		(at 36.83 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "894a80cd-c3d6-46b1-9418-54a0323081cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 369.5482 152.4 0)
+			(at 49.5518 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -9016,22 +9389,22 @@
 	)
 	(global_label "I2C 0 SDA"
 		(shape input)
-		(at 382.27 149.86 180)
+		(at 36.83 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "b31623f5-d93b-4f33-9951-996c6e1a2d01")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 369.4877 149.86 0)
+			(at 49.6123 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -9614,7 +9987,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 389.89 168.91 0)
+		(at 29.21 134.62 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9623,7 +9997,7 @@
 		(fields_autoplaced yes)
 		(uuid "17dc1a48-b3d5-4117-8996-50c3a95ee7c3")
 		(property "Reference" "J6"
-			(at 392.43 168.9099 0)
+			(at 26.67 134.6199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9632,7 +10006,7 @@
 			)
 		)
 		(property "Value" "I2C 1 Conn"
-			(at 392.43 171.4499 0)
+			(at 26.67 137.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9641,7 +10015,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 389.89 168.91 0)
+			(at 29.21 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9650,7 +10024,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 389.89 168.91 0)
+			(at 29.21 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9659,7 +10033,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 389.89 168.91 0)
+			(at 29.21 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9756,7 +10130,8 @@
 	)
 	(symbol
 		(lib_id "power:+5VP")
-		(at 382.27 147.32 0)
+		(at 36.83 113.03 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9765,7 +10140,7 @@
 		(fields_autoplaced yes)
 		(uuid "1b640eb0-c6cb-4d79-a9db-74fbe8e5ea52")
 		(property "Reference" "#PWR021"
-			(at 382.27 151.13 0)
+			(at 36.83 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9774,7 +10149,7 @@
 			)
 		)
 		(property "Value" "+5VP"
-			(at 382.27 142.24 0)
+			(at 36.83 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9782,7 +10157,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 382.27 147.32 0)
+			(at 36.83 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9791,7 +10166,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 382.27 147.32 0)
+			(at 36.83 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9800,7 +10175,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 382.27 147.32 0)
+			(at 36.83 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9979,7 +10354,8 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 382.27 173.99 0)
+		(at 36.83 139.7 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9988,7 +10364,7 @@
 		(fields_autoplaced yes)
 		(uuid "24a70a44-6a2c-429a-92f3-382028c7ec4e")
 		(property "Reference" "#PWR024"
-			(at 382.27 179.07 0)
+			(at 36.83 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9997,7 +10373,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 382.143 177.8 0)
+			(at 36.957 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10005,7 +10381,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 382.27 175.26 0)
+			(at 36.83 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10014,7 +10390,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 382.27 175.26 0)
+			(at 36.83 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10023,7 +10399,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 382.27 173.99 0)
+			(at 36.83 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10836,6 +11212,81 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 389.89 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "441d3ede-bd3e-4204-9b89-eb4af12d463c")
+		(property "Reference" "J7"
+			(at 392.43 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Stepper 0 Conn"
+			(at 392.43 152.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 389.89 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 389.89 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 389.89 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "157fecf9-aee4-4d49-a3de-ceaf05aa5801")
+		)
+		(pin "2"
+			(uuid "e0b1845d-cff8-4225-9d98-f50b5e36872f")
+		)
+		(pin "1"
+			(uuid "541cf813-063e-4a0f-a44a-5cc76edf610c")
+		)
+		(pin "4"
+			(uuid "436735f8-3245-4884-84b4-8642939158bc")
+		)
+		(instances
+			(project "main board"
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N5822")
 		(at 58.42 31.75 270)
 		(unit 1)
@@ -10974,7 +11425,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 389.89 149.86 0)
+		(at 29.21 115.57 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10983,7 +11435,7 @@
 		(fields_autoplaced yes)
 		(uuid "4a19494b-92bc-4a0e-8ad8-b96e252d865a")
 		(property "Reference" "J5"
-			(at 392.43 149.8599 0)
+			(at 26.67 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10992,7 +11444,7 @@
 			)
 		)
 		(property "Value" "I2C 0 Conn"
-			(at 392.43 152.3999 0)
+			(at 26.67 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11001,7 +11453,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 389.89 149.86 0)
+			(at 29.21 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11010,7 +11462,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 389.89 149.86 0)
+			(at 29.21 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11019,7 +11471,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 389.89 149.86 0)
+			(at 29.21 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12329,7 +12781,8 @@
 	)
 	(symbol
 		(lib_id "power:+5VP")
-		(at 382.27 166.37 0)
+		(at 36.83 132.08 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12338,7 +12791,7 @@
 		(fields_autoplaced yes)
 		(uuid "87731208-dbab-4d04-864d-4e13377e053a")
 		(property "Reference" "#PWR023"
-			(at 382.27 170.18 0)
+			(at 36.83 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12347,7 +12800,7 @@
 			)
 		)
 		(property "Value" "+5VP"
-			(at 382.27 161.29 0)
+			(at 36.83 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12355,7 +12808,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 382.27 166.37 0)
+			(at 36.83 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12364,7 +12817,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 382.27 166.37 0)
+			(at 36.83 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12373,7 +12826,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 382.27 166.37 0)
+			(at 36.83 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12498,6 +12951,119 @@
 			(project ""
 				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:Pololu_Breakout_A4988")
+		(at 314.96 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8954a66e-1d1e-45ad-b8c5-ef58d01c2c7d")
+		(property "Reference" "A3"
+			(at 322.1833 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pololu_Breakout_A4988"
+			(at 322.1833 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Module:Pololu_Breakout-16_15.2x20.3mm"
+			(at 321.945 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.pololu.com/product/2980/pictures"
+			(at 317.5 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Pololu Breakout Board, Stepper Driver A4988"
+			(at 314.96 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "96d8c35c-854f-4f96-90a5-277c4abfa347")
+		)
+		(pin "14"
+			(uuid "0d42fcb3-8642-4ce6-955f-d7772eb767de")
+		)
+		(pin "11"
+			(uuid "62e2429a-05f8-482c-9380-7c48ed057534")
+		)
+		(pin "8"
+			(uuid "4d4d4f58-5c5a-4124-8391-105ebe0ede18")
+		)
+		(pin "6"
+			(uuid "47034821-2fd8-407e-9876-746768541ec7")
+		)
+		(pin "15"
+			(uuid "fec9ff3e-1f78-45a8-b814-e97f29bcbcc1")
+		)
+		(pin "13"
+			(uuid "70cdb128-34ab-471d-a0b3-5731a632295d")
+		)
+		(pin "9"
+			(uuid "0e7d3b29-a27a-4221-b961-10547c34d9c6")
+		)
+		(pin "10"
+			(uuid "f00320a2-8d50-4388-b769-6746c6a4760e")
+		)
+		(pin "3"
+			(uuid "1efe6204-a6c9-4b7f-95ac-2fedcf97584e")
+		)
+		(pin "2"
+			(uuid "5234383e-ac69-42f2-90cf-5a67f9b3c157")
+		)
+		(pin "1"
+			(uuid "9f047755-b5b2-4ac9-b4d1-3dac403672cb")
+		)
+		(pin "16"
+			(uuid "afd373b1-cb88-49d5-935a-d3c94ab96ee6")
+		)
+		(pin "5"
+			(uuid "c9576ca3-d8df-4f4b-9184-d3f499a7d53d")
+		)
+		(pin "4"
+			(uuid "98ae361a-b268-4589-b4da-420e3027bce9")
+		)
+		(pin "12"
+			(uuid "6dfc7708-bc09-4ac6-9637-a6f401f568b9")
+		)
+		(instances
+			(project ""
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "A3")
 					(unit 1)
 				)
 			)
@@ -14480,7 +15046,8 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 382.27 154.94 0)
+		(at 36.83 120.65 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14489,7 +15056,7 @@
 		(fields_autoplaced yes)
 		(uuid "df8f1cab-9080-4297-ae64-be182ba5f090")
 		(property "Reference" "#PWR022"
-			(at 382.27 160.02 0)
+			(at 36.83 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14498,7 +15065,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 382.143 158.75 0)
+			(at 36.957 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14506,7 +15073,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 382.27 156.21 0)
+			(at 36.83 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14515,7 +15082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 382.27 156.21 0)
+			(at 36.83 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14524,7 +15091,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 382.27 154.94 0)
+			(at 36.83 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
