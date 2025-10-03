@@ -1,0 +1,20 @@
+# LMZ13608 configuration
+
+Vin min = 9v
+Vin max = 12v
+
+Vout = 5v
+
+## Enable resitors
+Rent / Renb = (Vin min / 1.274) - 1
+
+Vin min in volt
+Rent and Renb same unit and above 5kΩ
+
+Maybe 47kΩ for Rent and 7.75kΩ for Renb
+
+## Output voltage resistors
+Rfbt / Rfbb = (Vout / 0.795) – 1
+
+Vout in volt
+Rent and Renb in the range of 1.0 kΩ to 10.0 kΩ
