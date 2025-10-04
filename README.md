@@ -6,5 +6,5 @@ Main robot code, pcbs and 3d modeling for the Eurobot 2025-2026 competition.
 
 ## LICENSES
 - This program is open-source : you can redistribute and/or modify it under the term of the **GNU GPLv3**.
-  Copyright (C) 2025 Ulysse Cura. See [LICENSE](LICENSE) or [gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html).
+  Copyright (C) 2025 Riombotique. See [LICENSE](LICENSE) or [gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html).
 
