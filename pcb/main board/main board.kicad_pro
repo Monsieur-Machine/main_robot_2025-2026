@@ -612,6 +612,10 @@
     [
       "2b41feff-4875-412f-ac81-a28835b7fe51",
       "Root"
+    ],
+    [
+      "81807d62-4132-487d-945b-1bde10f96eea",
+      "motors and steppers drivers"
     ]
   ],
   "text_variables": {}
