@@ -7115,6 +7115,28 @@
 		)
 		(uuid "ff97d0bd-165b-4261-9fc7-95f7179b02ce")
 	)
+	(global_label "Motor 2 Direction Pin 2"
+		(shape input)
+		(at 245.11 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0150e068-edca-4740-92df-6c16d3868834")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Motor 4 Activation Pin"
 		(shape input)
 		(at 140.97 53.34 180)
@@ -7155,28 +7177,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 2 Direction Pin 2"
-		(shape input)
-		(at 245.11 48.26 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "12270abe-a655-4bb9-86ff-440aee9d7aa0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -7291,6 +7291,28 @@
 			)
 		)
 	)
+	(global_label "Motor 4 Direction Pin 2"
+		(shape input)
+		(at 245.11 43.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2bbadbbd-abc9-482c-82a5-8ed1abe43021")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Servo 6 PWM"
 		(shape input)
 		(at 140.97 68.58 180)
@@ -7313,9 +7335,9 @@
 			)
 		)
 	)
-	(global_label "Motor 3 Direction Pin 1"
+	(global_label "Motor 4 Direction Pin 1"
 		(shape input)
-		(at 245.11 50.8 0)
+		(at 245.11 40.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7323,9 +7345,9 @@
 			)
 			(justify left)
 		)
-		(uuid "32b6e668-ad7f-4866-b607-3a27ce2b663d")
+		(uuid "338eb2d8-feee-42e9-94fc-168b47784683")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 50.8 0)
+			(at 271.1364 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7379,9 +7401,9 @@
 			)
 		)
 	)
-	(global_label "Motor 1 Direction Pin 1"
+	(global_label "Motor 3 Direction Pin 2"
 		(shape input)
-		(at 245.11 40.64 0)
+		(at 245.11 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7389,9 +7411,31 @@
 			)
 			(justify left)
 		)
-		(uuid "3f0c1560-bc64-4028-9314-d8f6babddb71")
+		(uuid "3f6b3d76-7ad3-46dd-abc6-53b8d0d41997")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 40.64 0)
+			(at 271.1364 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Motor 3 Direction Pin 1"
+		(shape input)
+		(at 245.11 45.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "431ed1a5-6a2b-43dc-8f54-d3239fec96d2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7445,28 +7489,6 @@
 			)
 		)
 	)
-	(global_label "Motor 4 Direction Pin 1"
-		(shape input)
-		(at 245.11 55.88 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4e5fab8e-24e6-4052-ab8a-bff70fab3117")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Servo 8 PWM"
 		(shape input)
 		(at 227.33 148.59 270)
@@ -7485,28 +7507,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 4 Direction Pin 2"
-		(shape input)
-		(at 245.11 58.42 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "56515620-c7ff-4060-9cb1-5394a40b27fa")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -7700,28 +7700,6 @@
 		(uuid "91e42615-bdb1-4a82-9aa8-ef3a23c6d9a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 120.7323 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 3 Direction Pin 2"
-		(shape input)
-		(at 245.11 53.34 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9759553a-cde4-4db7-ace1-58021bd9191b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7951,28 +7929,6 @@
 			)
 		)
 	)
-	(global_label "Motor 2 Direction Pin 1"
-		(shape input)
-		(at 245.11 45.72 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b98802e6-28f5-40dc-9005-ab4c18435d94")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Stepper 0 Sleep"
 		(shape input)
 		(at 245.11 66.04 0)
@@ -8008,28 +7964,6 @@
 		(uuid "c5a7ff0d-4af0-4d3e-ba53-82e582601677")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 262.6093 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 1 Direction Pin 2"
-		(shape input)
-		(at 245.11 43.18 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c60dbeba-8228-43bb-a7f4-1ed6d8c49a68")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.1364 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8101,6 +8035,72 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Motor 1 Direction Pin 2"
+		(shape input)
+		(at 245.11 53.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d883dce2-ae28-4c54-9a78-1a789b61a4ff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Motor 2 Direction Pin 1"
+		(shape input)
+		(at 245.11 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dd08efbc-0ae1-4861-98ff-4ae4e178829d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Motor 1 Direction Pin 1"
+		(shape input)
+		(at 245.11 50.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e52c146e-7628-45b5-a1ea-7f8dedb6c8ed")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.1364 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
