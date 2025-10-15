@@ -4008,7 +4008,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 0 Step"
+	(global_label "Stepper 1 Step"
 		(shape input)
 		(at 66.04 128.27 180)
 		(fields_autoplaced yes)
@@ -4052,7 +4052,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 2 Step"
+	(global_label "Stepper 3 Step"
 		(shape input)
 		(at 208.28 128.27 180)
 		(fields_autoplaced yes)
@@ -4074,7 +4074,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 1 Sleep"
+	(global_label "Stepper 2 Sleep"
 		(shape input)
 		(at 137.16 120.65 180)
 		(fields_autoplaced yes)
@@ -4250,7 +4250,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 1 Step"
+	(global_label "Stepper 2 Step"
 		(shape input)
 		(at 137.16 128.27 180)
 		(fields_autoplaced yes)
@@ -4360,7 +4360,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 0 Sleep"
+	(global_label "Stepper 1 Sleep"
 		(shape input)
 		(at 66.04 120.65 180)
 		(fields_autoplaced yes)
@@ -4426,7 +4426,7 @@
 			)
 		)
 	)
-	(global_label "Stepper 2 Sleep"
+	(global_label "Stepper 3 Sleep"
 		(shape input)
 		(at 208.28 120.65 180)
 		(fields_autoplaced yes)
@@ -5513,7 +5513,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Stepper 0 Conn"
+		(property "Value" "Stepper 1 Conn"
 			(at 101.6 130.8099 0)
 			(effects
 				(font
@@ -6291,7 +6291,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Stepper 1 Conn"
+		(property "Value" "Stepper 2 Conn"
 			(at 172.72 130.8099 0)
 			(effects
 				(font
@@ -7876,7 +7876,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Stepper 2 Conn"
+		(property "Value" "Stepper 3 Conn"
 			(at 243.84 130.8099 0)
 			(effects
 				(font
