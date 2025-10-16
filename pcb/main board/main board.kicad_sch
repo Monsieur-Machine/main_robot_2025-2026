@@ -7297,50 +7297,6 @@
 			)
 		)
 	)
-	(global_label "Motor 4 Activation Pin"
-		(shape input)
-		(at 140.97 53.34 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "05903cb1-c009-455f-93c0-ff0454760dd1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.3346 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 3 Activation Pin"
-		(shape input)
-		(at 140.97 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0c253550-6065-405c-bb87-557dc1a75ce9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.3346 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "I2C 0 SDA"
 		(shape input)
 		(at 204.47 40.64 180)
@@ -7385,28 +7341,6 @@
 			)
 		)
 	)
-	(global_label "Servo 7 PWM"
-		(shape input)
-		(at 140.97 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1f001012-4cb9-4f24-87dc-44e2b28c702f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "I2C 1 SCL"
 		(shape input)
 		(at 36.83 137.16 0)
@@ -7429,9 +7363,9 @@
 			)
 		)
 	)
-	(global_label "Servo 6 PWM"
+	(global_label "Motor 2 Activation Pin"
 		(shape input)
-		(at 140.97 68.58 180)
+		(at 140.97 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7439,9 +7373,9 @@
 			)
 			(justify right)
 		)
-		(uuid "2f6c39d9-95fd-42a0-99b8-60774d9708e6")
+		(uuid "2d744e11-24a1-40ec-b640-b4d80cc1c64f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 68.58 0)
+			(at 116.3346 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7649,6 +7583,28 @@
 			)
 		)
 	)
+	(global_label "Motor 4 Activation Pin"
+		(shape input)
+		(at 140.97 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "531f1589-6612-4a94-ae91-a83edfa0848d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.3346 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "I2C 0 SCL"
 		(shape input)
 		(at 191.77 50.8 0)
@@ -7667,6 +7623,94 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 5 PWM"
+		(shape input)
+		(at 140.97 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "595a75f5-1573-4ddd-b956-828fca288dc6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 7 PWM"
+		(shape input)
+		(at 140.97 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5a09628f-61fc-468c-a852-0f8f675bfc92")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 3 PWM"
+		(shape input)
+		(at 140.97 50.8 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6b245c7a-eb09-4623-8f5b-9c1b6ecfc390")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Motor 3 Activation Pin"
+		(shape input)
+		(at 140.97 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6df893ca-098b-420e-91ad-27844e305c81")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.3346 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -7693,28 +7737,6 @@
 			)
 		)
 	)
-	(global_label "Motor 1 Activation Pin"
-		(shape input)
-		(at 140.97 45.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "73858af1-bf1e-47ef-8116-dd3960b23428")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.3346 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Servo 6 PWM"
 		(shape input)
 		(at 201.93 148.59 270)
@@ -7728,6 +7750,28 @@
 		(uuid "84420953-dc5e-45e6-829f-95faf120a12f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 201.93 164.0936 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 6 PWM"
+		(shape input)
+		(at 140.97 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "880a4568-3d24-4b1d-b29f-65753260c8ea")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7755,6 +7799,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 2 PWM"
+		(shape input)
+		(at 140.97 48.26 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8cd28297-add6-4322-acdc-a0ee37998dcf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -7803,6 +7869,50 @@
 			)
 		)
 	)
+	(global_label "Motor 1 Activation Pin"
+		(shape input)
+		(at 140.97 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "923edf31-7a13-496e-b6ac-2dbc683a8b9b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.3346 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Servo 4 PWM"
+		(shape input)
+		(at 140.97 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9289f5ac-013e-4a1a-91f5-1bb0ab37b5b9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.4664 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "Stepper 2 Step"
 		(shape input)
 		(at 245.11 68.58 0)
@@ -7821,28 +7931,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Servo 4 PWM"
-		(shape input)
-		(at 140.97 63.5 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "97a2b884-2ee7-4f63-879e-541d527af213")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -7935,94 +8023,6 @@
 			)
 		)
 	)
-	(global_label "Servo 1 PWM"
-		(shape input)
-		(at 140.97 55.88 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9b79dcec-16cd-4d7c-a8fb-16c745fc9a73")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Servo 8 PWM"
-		(shape input)
-		(at 140.97 73.66 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9f47d7d1-c2cb-46e4-bd1f-32c6ab13da16")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Servo 5 PWM"
-		(shape input)
-		(at 140.97 66.04 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a2f4db51-52f7-4ec9-8bf0-a7adbd3b7591")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Motor 2 Activation Pin"
-		(shape input)
-		(at 140.97 48.26 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a79fc827-da88-4d5f-a8ad-cf0cab6affc8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.3346 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "I2C 1 SCL"
 		(shape input)
 		(at 127 114.3 0)
@@ -8067,9 +8067,9 @@
 			)
 		)
 	)
-	(global_label "Servo 3 PWM"
+	(global_label "Servo 1 PWM"
 		(shape input)
-		(at 140.97 60.96 180)
+		(at 140.97 45.72 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8077,9 +8077,9 @@
 			)
 			(justify right)
 		)
-		(uuid "b8b0a0ca-70ae-4480-87fe-6055ffa0938f")
+		(uuid "b46d91c1-9cc2-4200-b3b7-8749ac8e3016")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 60.96 0)
+			(at 125.4664 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8309,9 +8309,9 @@
 			)
 		)
 	)
-	(global_label "Servo 2 PWM"
+	(global_label "Servo 8 PWM"
 		(shape input)
-		(at 140.97 58.42 180)
+		(at 140.97 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8319,9 +8319,9 @@
 			)
 			(justify right)
 		)
-		(uuid "e7c7d3ca-abaf-4c83-83f5-7707edc78950")
+		(uuid "f194aa9c-3beb-4142-92ca-c37c39e3cd65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.4664 58.42 0)
+			(at 125.4664 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11798,7 +11798,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
+		(property "Footprint" "Module:RaspberryPi_Pico_Common_THT"
 			(at 82.55 191.77 0)
 			(effects
 				(font
@@ -12456,7 +12456,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
+		(property "Footprint" "Module:RaspberryPi_Pico_Common_THT"
 			(at 166.37 107.95 0)
 			(effects
 				(font
