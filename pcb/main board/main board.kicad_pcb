@@ -208,7 +208,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J3"
-			(at 0 -2.38 90)
+			(at 2.5 1 180)
 			(layer "F.SilkS")
 			(uuid "38d749b7-bbd4-4b96-ae41-828d1b637535")
 			(effects
@@ -220,7 +220,7 @@
 		)
 		(property "Value" "Motor 2 Conn"
 			(at 0 4.92 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "74700698-4a83-44be-90d5-39699ea1fc7a")
 			(effects
 				(font
@@ -410,7 +410,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.27 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "31767e49-2834-42ff-807d-9f3e0929f65b")
 			(effects
 				(font
@@ -461,7 +461,7 @@
 		(descr "Inductor, APV, APH1040, 10.8x10.0x3.8mm, (http://en.apvind.com/public/upload/20240408/996aafa961154ed753e4983e7eb80fa7.pdf), generated with kicad-footprint-generator gen_inductor.py")
 		(tags "Inductor molded power shielded")
 		(property "Reference" "L2"
-			(at 0 -6 90)
+			(at 7.75 0 180)
 			(layer "F.SilkS")
 			(uuid "6e5c059f-ff5d-4a0f-87f2-bc278a0ae3f9")
 			(effects
@@ -473,7 +473,7 @@
 		)
 		(property "Value" "1.8uH"
 			(at 0 6 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "bec48e86-7474-472c-be7f-80ab76cce33e")
 			(effects
 				(font
@@ -653,7 +653,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "528e656a-66cc-4f20-9892-bd426ce61f33")
 			(effects
 				(font
@@ -714,7 +714,7 @@
 		)
 		(property "Value" "Motor 3 Encoder"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "066a0ebf-d090-4899-9e26-c4919d7b9d9e")
 			(effects
 				(font
@@ -904,7 +904,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "65655f46-ab23-4d59-9323-77372f7407b1")
 			(effects
 				(font
@@ -989,7 +989,7 @@
 		)
 		(property "Value" "Motor 4 Encoder"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "7f4cdc07-9a0f-4bef-b14b-17c5033dd465")
 			(effects
 				(font
@@ -1179,7 +1179,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6db59da9-4ad3-42d1-9d2b-19be3477c453")
 			(effects
 				(font
@@ -1252,7 +1252,7 @@
 		(descr "C, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=5mm, Non-Polar Electrolytic Capacitor")
 		(tags "C Radial series Radial pin pitch 2.50mm diameter 6.3mm height 5mm Non-Polar Electrolytic Capacitor")
 		(property "Reference" "C8"
-			(at 1.25 -4.4 90)
+			(at 1.5 4.5 270)
 			(layer "F.SilkS")
 			(uuid "41b7335d-77a8-4012-9e7a-cc98dca3d149")
 			(effects
@@ -1264,7 +1264,7 @@
 		)
 		(property "Value" "2.2uF"
 			(at 1.25 4.4 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2a8ac1c4-6718-40ad-8795-b9546f611558")
 			(effects
 				(font
@@ -1337,7 +1337,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "3a0ce5ec-f59b-4666-93a8-5d72fe54ea2f")
 			(effects
 				(font
@@ -1398,7 +1398,7 @@
 		)
 		(property "Value" "Pololu_Breakout_A4988"
 			(at 6.35 20.17 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6076230d-a405-44ea-98ac-99acb8683ee3")
 			(effects
 				(font
@@ -1630,7 +1630,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 6.35 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2a1d04aa-b03c-427f-889a-1e0dcfe06bf9")
 			(effects
 				(font
@@ -1835,7 +1835,7 @@
 		(descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "Q2"
-			(at 0 -3.4 90)
+			(at 4.6625 -0.55 180)
 			(layer "F.SilkS")
 			(uuid "f91fc45a-a936-4cf2-8000-180ed7c8f30e")
 			(effects
@@ -1847,7 +1847,7 @@
 		)
 		(property "Value" "IRF8714PBF"
 			(at 0 3.4 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "997069a3-930e-495b-812f-6f644c920abd")
 			(effects
 				(font
@@ -2109,7 +2109,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "862598bb-289d-4dd1-95d3-2a1e68ecb7d6")
 			(effects
 				(font
@@ -2218,7 +2218,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R2"
-			(at 5.08 -2.37 90)
+			(at 12.16 0 180)
 			(layer "F.SilkS")
 			(uuid "0bc21856-6bf3-43ad-867f-3e6ac80c7e0a")
 			(effects
@@ -2230,7 +2230,7 @@
 		)
 		(property "Value" "82.5kΩ"
 			(at 5.08 2.37 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "0d68d94c-44a5-4a9a-a3d0-8ce241ec30e8")
 			(effects
 				(font
@@ -2343,7 +2343,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "ecb84b39-63a1-413e-b40c-12a51d31f596")
 			(effects
 				(font
@@ -2392,7 +2392,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D3"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "1411ff59-339b-45aa-821b-b4ef38f10ac2")
 			(effects
@@ -2404,7 +2404,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "30ad820d-bed1-4c87-98b1-af3cd488d77a")
 			(effects
 				(font
@@ -2612,10 +2612,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "0a269b80-b6c6-4a7e-b8b9-af202fc62238")
+			(uuid "623d8ae4-57bd-4fb5-8d5e-e3be21e93849")
 			(effects
 				(font
 					(size 1 1)
@@ -2623,10 +2623,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "623d8ae4-57bd-4fb5-8d5e-e3be21e93849")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "0a269b80-b6c6-4a7e-b8b9-af202fc62238")
 			(effects
 				(font
 					(size 1 1)
@@ -2689,7 +2689,7 @@
 		)
 		(property "Value" "Servo 4 Conn"
 			(at 0 7.54 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2c7d4c80-e2c2-45e1-9261-1e33528f203a")
 			(effects
 				(font
@@ -2879,7 +2879,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "f0f292b8-85b5-40e7-bd98-56cab10fa5fc")
 			(effects
 				(font
@@ -2941,7 +2941,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D5"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "9d8cb041-db73-4e4d-b051-6d8ab26e5829")
 			(effects
@@ -2953,7 +2953,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "adab5c63-3fd5-4668-afcf-113b6bbc1bbc")
 			(effects
 				(font
@@ -3174,7 +3174,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "77bfc432-a8e5-4e3c-9e06-d66b9b59af55")
 			(effects
 				(font
@@ -3226,7 +3226,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J9"
-			(at 0 -2.38 0)
+			(at 2.5 3.62 90)
 			(layer "F.SilkS")
 			(uuid "e5c93dd6-795a-4d4b-a5e8-6938fb59552e")
 			(effects
@@ -3238,7 +3238,7 @@
 		)
 		(property "Value" "Stepper 3 Conn"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "5ac23e6b-1826-4d4c-bd50-77c35fb03e95")
 			(effects
 				(font
@@ -3428,7 +3428,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "84fefe40-fd61-40fa-bc6f-f3827de23fd7")
 			(effects
 				(font
@@ -3501,7 +3501,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D15"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "17498ce2-83d2-4992-ba5c-9f4a71c6f055")
 			(effects
@@ -3513,7 +3513,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "01be6ff1-73c8-42da-bfe4-e95d95266957")
 			(effects
 				(font
@@ -3721,10 +3721,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "ab6d5678-7038-4692-9897-569e0ce3ef64")
+			(uuid "c61f0465-ca5f-4015-967d-ea65fd0faf76")
 			(effects
 				(font
 					(size 1 1)
@@ -3732,10 +3732,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "c61f0465-ca5f-4015-967d-ea65fd0faf76")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "ab6d5678-7038-4692-9897-569e0ce3ef64")
 			(effects
 				(font
 					(size 1 1)
@@ -3786,7 +3786,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J6"
-			(at 0 -2.38 0)
+			(at 2.5 4.04 90)
 			(layer "F.SilkS")
 			(uuid "3afd24a6-a87b-462f-a6ef-1800dc17095c")
 			(effects
@@ -3798,7 +3798,7 @@
 		)
 		(property "Value" "I2C 1 Conn"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "9b595ff1-ddd9-4c40-a67c-d5d90fccbab7")
 			(effects
 				(font
@@ -3988,7 +3988,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b79aedeb-2cd6-4b63-af1f-9d09f77eda26")
 			(effects
 				(font
@@ -4061,7 +4061,7 @@
 		(descr "Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf")
 		(tags "module usb pcb antenna")
 		(property "Reference" "A2"
-			(at 20.6375 48.895 0)
+			(at 7.28 51.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "28d6e815-92d7-422b-852a-7bd734b6438d")
@@ -4076,7 +4076,7 @@
 		(property "Value" "RaspberryPi_Pico_W"
 			(at 8.89 52.07 0)
 			(unlocked yes)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "717fa6f1-a9e2-4083-a17f-1b72fbbc6e5c")
 			(effects
 				(font
@@ -4754,7 +4754,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 8.89 24.13 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "865bd24f-c905-4c69-bc72-ac51dc243ff5")
 			(effects
 				(font
@@ -5677,7 +5677,7 @@
 		)
 		(property "Value" "Servo 1 Conn"
 			(at 0 7.54 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "938dc8c2-f37b-4fba-897b-8d4291adecb5")
 			(effects
 				(font
@@ -5867,7 +5867,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e79352a6-1419-469c-86dd-22eb74342881")
 			(effects
 				(font
@@ -5941,7 +5941,7 @@
 		)
 		(property "Value" "120pF"
 			(at 2.5 2.2 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e72dec50-44c4-4064-8909-088f5a470c7d")
 			(effects
 				(font
@@ -6043,7 +6043,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "d5b3252e-10c9-4ad1-b4af-421b9cf4ffa0")
 			(effects
 				(font
@@ -6092,7 +6092,7 @@
 		(descr "HTSSOP, 14 Pin (http://www.ti.com/lit/ds/symlink/lm5161.pdf#page=34), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "HTSSOP SO TI-PWP0014A")
 		(property "Reference" "U6"
-			(at 0 -3.45 90)
+			(at -4.6375 0 180)
 			(layer "F.SilkS")
 			(uuid "2ff4467c-e3de-4812-85ce-89e547f6a3eb")
 			(effects
@@ -6104,7 +6104,7 @@
 		)
 		(property "Value" "LM3150MH"
 			(at 0 3.45 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e30f7c7c-0849-4acb-bebb-34dec2d222d3")
 			(effects
 				(font
@@ -6366,7 +6366,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "79978693-39db-4f31-923f-36173d83adc4")
 			(effects
 				(font
@@ -6592,7 +6592,7 @@
 		)
 		(property "Value" "Pololu_Breakout_A4988"
 			(at 6.35 20.17 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "66c0da18-96f3-47a1-ab9a-1e66b9643fea")
 			(effects
 				(font
@@ -6824,7 +6824,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 6.35 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c42e635a-c56d-4de0-9575-349b3024a040")
 			(effects
 				(font
@@ -7041,7 +7041,7 @@
 		)
 		(property "Value" "Servo 2 Conn"
 			(at 0 7.46 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "299497f8-063d-4356-83bc-65e0121fd5da")
 			(effects
 				(font
@@ -7231,7 +7231,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c05fb81e-5462-418a-bf26-c4614257d3f3")
 			(effects
 				(font
@@ -7293,7 +7293,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J2"
-			(at 0 -2.38 90)
+			(at 2.5 1.54 180)
 			(layer "F.SilkS")
 			(uuid "f5ad4ad2-07f6-42c0-b039-632e23692185")
 			(effects
@@ -7305,7 +7305,7 @@
 		)
 		(property "Value" "Motor 1 Conn"
 			(at 0 4.92 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "fb190e11-6b9f-4ea7-ba05-4988364f8564")
 			(effects
 				(font
@@ -7495,7 +7495,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.27 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "8785f427-47fa-4efd-b003-766527e2d696")
 			(effects
 				(font
@@ -7546,7 +7546,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J1"
-			(at 0 -2.38 90)
+			(at 2.5 1 180)
 			(layer "F.SilkS")
 			(uuid "5c952d9d-521c-4d04-9738-142ed453e631")
 			(effects
@@ -7558,7 +7558,7 @@
 		)
 		(property "Value" "Motor 0 Conn"
 			(at 0 4.92 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "9322929c-914e-43f5-b7c7-a47b78041e92")
 			(effects
 				(font
@@ -7748,7 +7748,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.27 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "462d54c4-59e1-4dd4-a6e9-3a2d4258eaf0")
 			(effects
 				(font
@@ -7811,7 +7811,7 @@
 		)
 		(property "Value" "100nF"
 			(at 2.5 2.2 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "d11fb588-75e0-4e18-9d57-aeea365b1996")
 			(effects
 				(font
@@ -7913,7 +7913,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "519c56f0-662f-4be7-9f2e-c65fd013b4a6")
 			(effects
 				(font
@@ -7962,7 +7962,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D8"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "f5ac62e2-ff94-46ee-8d38-cc8732056876")
 			(effects
@@ -7974,7 +7974,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "4c58f02a-618e-4d46-8467-2aaa051e6b2e")
 			(effects
 				(font
@@ -8182,10 +8182,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "c385c096-4e00-4404-a084-27a6c69787ff")
+			(uuid "eda02dc3-d3a5-4451-bf1c-7eee74b03a6e")
 			(effects
 				(font
 					(size 1 1)
@@ -8193,10 +8193,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "eda02dc3-d3a5-4451-bf1c-7eee74b03a6e")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "c385c096-4e00-4404-a084-27a6c69787ff")
 			(effects
 				(font
 					(size 1 1)
@@ -8247,7 +8247,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C17"
-			(at 1.25 -4.4 270)
+			(at -3 0 0)
 			(layer "F.SilkS")
 			(uuid "1f2388b2-2f0e-4271-ab02-03b5a02a7c70")
 			(effects
@@ -8259,7 +8259,7 @@
 		)
 		(property "Value" "100uF"
 			(at 1.25 4.4 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "47fb0614-4e52-4ea7-91a2-2891e63778f5")
 			(effects
 				(font
@@ -9712,7 +9712,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "7a0e4eea-4c2b-4c71-a181-f62e874b3ed7")
 			(effects
 				(font
@@ -9762,7 +9762,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C16"
-			(at 1.25 -4.4 270)
+			(at -3 0 0)
 			(layer "F.SilkS")
 			(uuid "04025b45-f5bf-416c-a3eb-1b6f734bcb8f")
 			(effects
@@ -9774,7 +9774,7 @@
 		)
 		(property "Value" "100uF"
 			(at 1.25 4.4 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "0e99a8a0-e2d1-490c-bd1d-3b8a8bace2a5")
 			(effects
 				(font
@@ -11227,7 +11227,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "015d2aaf-aa37-4d11-b241-a6929f90036b")
 			(effects
 				(font
@@ -11277,7 +11277,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D12"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "16f65a1e-8310-4e02-a777-08865fcd6252")
 			(effects
@@ -11289,7 +11289,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "5c7b01d8-68e1-481b-b843-7df8afbb11d8")
 			(effects
 				(font
@@ -11510,7 +11510,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e300ff36-ac1e-44ce-9257-75fc92be93c0")
 			(effects
 				(font
@@ -11562,7 +11562,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D7"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "0c8daffd-605a-4b05-b183-721c565accdf")
 			(effects
@@ -11574,7 +11574,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "516598b1-a567-4f23-8771-9f1d0051a4a8")
 			(effects
 				(font
@@ -11782,10 +11782,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "8fd1daf9-4149-4b68-b4f8-2e7efdc331de")
+			(uuid "ccb7b8ed-d630-4948-befa-1a7654581ccf")
 			(effects
 				(font
 					(size 1 1)
@@ -11793,10 +11793,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "ccb7b8ed-d630-4948-befa-1a7654581ccf")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "8fd1daf9-4149-4b68-b4f8-2e7efdc331de")
 			(effects
 				(font
 					(size 1 1)
@@ -11857,9 +11857,9 @@
 			)
 		)
 		(property "Value" "~"
-			(at 0 -14.5 0)
+			(at 0 -5.5 0)
 			(unlocked yes)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b620fd41-c0f0-44d8-bb11-f745d1f824af")
 			(effects
 				(font
@@ -11923,7 +11923,7 @@
 		(fp_text user "${REFERENCE}"
 			(at 0 -12.5 0)
 			(unlocked yes)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6af019eb-275c-4aeb-bdd1-d72ec1082380")
 			(effects
 				(font
@@ -11989,7 +11989,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D2"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "997dd91e-1686-423a-ac03-aa0b888222b1")
 			(effects
@@ -12001,7 +12001,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "887c7f16-2a14-4c26-8a6a-78436e3be800")
 			(effects
 				(font
@@ -12209,10 +12209,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "497041bc-54de-4f36-9f7e-f8e1edca93af")
+			(uuid "62c02d8d-0b89-431b-8938-a6b2c0c4858e")
 			(effects
 				(font
 					(size 1 1)
@@ -12220,10 +12220,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "62c02d8d-0b89-431b-8938-a6b2c0c4858e")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "497041bc-54de-4f36-9f7e-f8e1edca93af")
 			(effects
 				(font
 					(size 1 1)
@@ -12274,7 +12274,7 @@
 		(descr "SOIC, 8 Pin (JEDEC MS-012AA, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_8.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "Q1"
-			(at 0 -3.4 90)
+			(at 4.6625 0.45 180)
 			(layer "F.SilkS")
 			(uuid "02673231-3594-48fa-a855-7b05769ad730")
 			(effects
@@ -12286,7 +12286,7 @@
 		)
 		(property "Value" "IRF8714PBF"
 			(at 0 3.4 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "1ffe3405-5e99-4d8e-898c-fc92f3b02e54")
 			(effects
 				(font
@@ -12548,7 +12548,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "8b70b2ce-4a6c-49d8-8078-83614e95b24d")
 			(effects
 				(font
@@ -12657,7 +12657,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C15"
-			(at 1.25 -4.4 270)
+			(at -3 0 0)
 			(layer "F.SilkS")
 			(uuid "840ba5fd-f7d6-4b17-9a97-07a94b7d9130")
 			(effects
@@ -12669,7 +12669,7 @@
 		)
 		(property "Value" "100uF"
 			(at 1.25 4.4 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e6cf7346-9715-4784-801d-18201e3cd367")
 			(effects
 				(font
@@ -14122,7 +14122,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "a5f58d5d-40c6-4e76-aa7c-01268bc16ffe")
 			(effects
 				(font
@@ -14184,7 +14184,7 @@
 		)
 		(property "Value" "Servo 7 Conn"
 			(at 0 7.54 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "85ddbcf0-76c9-47f1-9650-d786c1881991")
 			(effects
 				(font
@@ -14374,7 +14374,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "8ee3f2ff-6f82-4ec4-a4b3-4ea34fcb30be")
 			(effects
 				(font
@@ -14448,7 +14448,7 @@
 		)
 		(property "Value" "Servo 5 Conn"
 			(at 0 7.46 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "59813eae-c322-41ed-88ac-d84ac922e220")
 			(effects
 				(font
@@ -14638,7 +14638,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "582f7752-f70b-4298-a6d7-c01e11d5a7f7")
 			(effects
 				(font
@@ -14700,7 +14700,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C11"
-			(at 1.25 -4.4 270)
+			(at -2.794888 0 0)
 			(layer "F.SilkS")
 			(uuid "d090dd40-2e1a-4f8e-9e8b-a161e6214d6c")
 			(effects
@@ -14711,8 +14711,8 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 1.25 4.4 270)
-			(layer "F.Fab")
+			(at 1.25 4.4 0)
+			(layer "User.1")
 			(uuid "987cd27c-9ec0-4fa4-b3df-50f27d475fe9")
 			(effects
 				(font
@@ -16215,7 +16215,7 @@
 		(descr "C, Disc series, Radial, pin pitch=5.00mm, diameter*width=4.3*1.9mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 5.00mm diameter 4.3mm width 1.9mm Capacitor")
 		(property "Reference" "C3"
-			(at 2.5 -2.2 90)
+			(at 2.5 2 90)
 			(layer "F.SilkS")
 			(uuid "c17a9137-d0cc-414a-966f-e1bbe95b51a7")
 			(effects
@@ -16227,7 +16227,7 @@
 		)
 		(property "Value" "100nF"
 			(at 2.5 2.2 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "60a58c84-c217-4d7f-9dbd-434d9e111249")
 			(effects
 				(font
@@ -16329,7 +16329,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "287e2460-f8db-4908-9e3d-ac55cb8df3e4")
 			(effects
 				(font
@@ -16378,7 +16378,7 @@
 		(descr "Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf")
 		(tags "module usb pcb antenna")
 		(property "Reference" "A1"
-			(at 20.6375 48.895 0)
+			(at 8 51.5 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "f20621b4-2d60-4a15-bb6c-651fc4008db1")
@@ -16393,7 +16393,7 @@
 		(property "Value" "RaspberryPi_Pico"
 			(at 8.89 52.07 0)
 			(unlocked yes)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c5bae2da-4bc5-4df6-b384-a3c839d28ac7")
 			(effects
 				(font
@@ -17001,66 +17001,6 @@
 			(layer "F.Fab")
 			(uuid "ed60437c-570a-460b-ba7f-63c20e348ee4")
 		)
-		(fp_text user "Out"
-			(at 1 -4.365 0)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "3953da4d-192a-40b6-acc3-df16eff1f12a")
-			(effects
-				(font
-					(size 0.3333 0.3333)
-					(thickness 0.05)
-				)
-			)
-		)
-		(fp_text user "AGND Plane"
-			(at 5.08 -7.62 90)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "4c6fa855-0416-4ca1-b631-2fdac98eb2ae")
-			(effects
-				(font
-					(size 0.5 0.5)
-					(thickness 0.075)
-				)
-			)
-		)
-		(fp_text user "Exposed"
-			(at 0 -24.6175 0)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "61507ce4-80f8-43a0-9797-6516612f8a8e")
-			(effects
-				(font
-					(size 0.3333 0.3333)
-					(thickness 0.05)
-				)
-			)
-		)
-		(fp_text user "Copper"
-			(at 1 -5.635 0)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "f0ccf38b-daa9-4b8e-aabc-e8b9732484f9")
-			(effects
-				(font
-					(size 0.3333 0.3333)
-					(thickness 0.05)
-				)
-			)
-		)
-		(fp_text user "Keep"
-			(at 0 -21.3175 0)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "f2f6c0b1-b915-4b0f-8321-f3dab4748122")
-			(effects
-				(font
-					(size 0.3333 0.3333)
-					(thickness 0.05)
-				)
-			)
-		)
 		(fp_text user "USB Cable"
 			(at 8.89 -13.335 0)
 			(unlocked yes)
@@ -17073,21 +17013,9 @@
 				)
 			)
 		)
-		(fp_text user "Exposed Copper Keep Out"
-			(at 0 24.765 0)
-			(unlocked yes)
-			(layer "Cmts.User")
-			(uuid "fb23e71a-c3f5-4d50-a6eb-67892f0ea8c4")
-			(effects
-				(font
-					(size 0.3333 0.3333)
-					(thickness 0.05)
-				)
-			)
-		)
 		(fp_text user "${REFERENCE}"
 			(at 8.89 24.13 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "1ffed605-4376-480c-90e6-b99b069f5feb")
 			(effects
 				(font
@@ -17957,7 +17885,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D10"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "3f28d496-6e67-419f-a546-1571db13ccbd")
 			(effects
@@ -17969,7 +17897,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "4e444fc8-aa40-42bf-9832-b21dbbe0336b")
 			(effects
 				(font
@@ -18190,7 +18118,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "adbb7c2e-427d-40ec-a696-2a2fd7c28c2e")
 			(effects
 				(font
@@ -18254,7 +18182,7 @@
 		)
 		(property "Value" "Servo 3 Conn"
 			(at 0 7.46 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "30f8f282-727d-40f9-8b6c-bb2d8714c726")
 			(effects
 				(font
@@ -18444,7 +18372,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "96cef527-cd74-446c-800e-a6dd19ae9ea9")
 			(effects
 				(font
@@ -18506,7 +18434,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R5"
-			(at 5.08 -2.37 0)
+			(at 12.16 -0.09 90)
 			(layer "F.SilkS")
 			(uuid "6d0ab8c2-d668-462f-8ea3-e2914bd733ef")
 			(effects
@@ -18518,7 +18446,7 @@
 		)
 		(property "Value" "4.7kΩ"
 			(at 5.08 2.37 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "079968bb-2547-4e5b-ae27-a9939324b8cd")
 			(effects
 				(font
@@ -18631,7 +18559,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "0d1c2827-c354-4519-a58e-15891ccfa98c")
 			(effects
 				(font
@@ -18680,7 +18608,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J11"
-			(at 0 -2.38 0)
+			(at -2.5 1.04 90)
 			(layer "F.SilkS")
 			(uuid "7a822301-f01c-417b-b33b-6eb44836cc09")
 			(effects
@@ -18692,7 +18620,7 @@
 		)
 		(property "Value" "BAU"
 			(at 0 4.92 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c0405594-b6d0-424c-beea-fc87f954d8b1")
 			(effects
 				(font
@@ -18933,7 +18861,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D16"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "b52bd380-fdb3-43e5-a8cc-22ccd16763d2")
 			(effects
@@ -18945,7 +18873,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "4259b2db-e01a-4eb4-8f4a-09c5f1ef101b")
 			(effects
 				(font
@@ -19166,7 +19094,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "a8d8f506-d8f6-4ab0-8863-b79520d902b0")
 			(effects
 				(font
@@ -19218,7 +19146,7 @@
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, diameter*width=3.8*2.6mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm diameter 3.8mm width 2.6mm Capacitor")
 		(property "Reference" "C12"
-			(at 1.25 -2.55 270)
+			(at 4.5 0 0)
 			(layer "F.SilkS")
 			(uuid "660d131e-1bb2-4623-8023-0d2405b3aa7a")
 			(effects
@@ -19230,7 +19158,7 @@
 		)
 		(property "Value" "100nF"
 			(at 1.25 2.55 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c76080dc-4265-4a1f-9ee9-0ef80cbae896")
 			(effects
 				(font
@@ -19352,7 +19280,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "d735129e-a15e-4d9e-887d-aa410ec75f7b")
 			(effects
 				(font
@@ -19413,7 +19341,7 @@
 		)
 		(property "Value" "100nF"
 			(at 2.5 2.2 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6c61252c-2e12-4933-84fc-5a4e8c1940fa")
 			(effects
 				(font
@@ -19515,7 +19443,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6a72b39e-f32b-4801-a5a0-c39a15db5f62")
 			(effects
 				(font
@@ -19576,7 +19504,7 @@
 		)
 		(property "Value" "MCP23017_SO"
 			(at 0 9.9 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "f5213470-5f52-4bf4-af0e-896e455e2fee")
 			(effects
 				(font
@@ -19878,7 +19806,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "0ef8b585-1bd9-443f-aa74-4b706b221a3c")
 			(effects
 				(font
@@ -20199,7 +20127,7 @@
 		)
 		(property "Value" "Motor 1 Encoder"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "370abf1a-ad5d-4172-a00d-725d656923b7")
 			(effects
 				(font
@@ -20389,7 +20317,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6ad19706-25dc-478f-aa10-443224c61107")
 			(effects
 				(font
@@ -20462,7 +20390,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D4"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "6495c1ea-2a71-45a6-8b74-fb9bd0fa1d26")
 			(effects
@@ -20474,7 +20402,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "57e9d407-4c55-45d4-99f6-8750158e2e68")
 			(effects
 				(font
@@ -20695,7 +20623,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "d3a372a6-9fe6-4df9-89ee-5072ff38c8c5")
 			(effects
 				(font
@@ -20759,7 +20687,7 @@
 		)
 		(property "Value" "Pololu_Breakout_A4988"
 			(at 6.35 20.17 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "eb4e50e3-b294-4298-b928-7ef1bdc45770")
 			(effects
 				(font
@@ -20991,7 +20919,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 6.35 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2fac048a-d54b-418c-bbb1-8a68ede25f21")
 			(effects
 				(font
@@ -21208,7 +21136,7 @@
 		)
 		(property "Value" "Servo 6 Conn"
 			(at 0 7.46 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b335d2cd-1d67-4e80-b733-0e6ca01073b8")
 			(effects
 				(font
@@ -21398,7 +21326,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "52309a8a-9fd4-489b-8a9c-464e5fcacf41")
 			(effects
 				(font
@@ -21472,7 +21400,7 @@
 		)
 		(property "Value" "470nF"
 			(at 2.5 2.2 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "233ff6ff-de82-461b-b974-8526036dbbba")
 			(effects
 				(font
@@ -21574,7 +21502,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "0229b7c9-fc69-46ce-a3bd-b3203c1e77c6")
 			(effects
 				(font
@@ -21623,7 +21551,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D1"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "0780c3a0-a2df-463e-a416-2b45c9306c3d")
 			(effects
@@ -21635,7 +21563,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "737d7784-a7ab-4b70-82ed-a921a85fb76e")
 			(effects
 				(font
@@ -21856,7 +21784,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "9e8508ea-a2b8-46d8-838f-0519453afc4f")
 			(effects
 				(font
@@ -21908,7 +21836,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R6"
-			(at 5.08 -2.37 0)
+			(at 12.16 -0.09 90)
 			(layer "F.SilkS")
 			(uuid "f62abaa9-400e-4641-a93c-b7e4cbba76a1")
 			(effects
@@ -21920,7 +21848,7 @@
 		)
 		(property "Value" "4.7kΩ"
 			(at 5.08 2.37 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "ea4c066f-abdd-42e1-8857-bf627e18a642")
 			(effects
 				(font
@@ -22033,7 +21961,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "c9a0e4f9-3d7a-443a-9f65-2210fdf93667")
 			(effects
 				(font
@@ -22082,7 +22010,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D9"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "8dcfad8c-e482-481e-aa20-5b0f5a4e51fc")
 			(effects
@@ -22094,7 +22022,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6b38a3b1-2990-42dc-aed8-966ef193e2fd")
 			(effects
 				(font
@@ -22315,7 +22243,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "eb5d2fbd-7ad2-45eb-90b3-161e221f42f3")
 			(effects
 				(font
@@ -22367,7 +22295,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R7"
-			(at 5.08 -2.37 0)
+			(at 12.16 0 90)
 			(layer "F.SilkS")
 			(uuid "145c2b58-3ec0-4b22-b4ea-2f4bc0d00f17")
 			(effects
@@ -22379,7 +22307,7 @@
 		)
 		(property "Value" "4.7kΩ"
 			(at 5.08 2.37 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "e96e31b3-8bc3-4186-80d0-aa82417cb23d")
 			(effects
 				(font
@@ -22492,7 +22420,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "5858e84a-65e9-42c9-8a74-bbf5db13a1c7")
 			(effects
 				(font
@@ -22541,7 +22469,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R4"
-			(at 5.08 -2.37 90)
+			(at 12.1375 0 180)
 			(layer "F.SilkS")
 			(uuid "4165cab8-83c2-4b16-85bd-551885ee9b73")
 			(effects
@@ -22553,7 +22481,7 @@
 		)
 		(property "Value" "10kΩ"
 			(at 5.08 2.37 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6e77d4a8-c647-4d5e-ad57-9659076b4d31")
 			(effects
 				(font
@@ -22666,7 +22594,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "480bae89-6f3c-4749-826b-74cb56cc4f96")
 			(effects
 				(font
@@ -22715,7 +22643,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C14"
-			(at 1.25 -4.4 90)
+			(at 1 4.5 90)
 			(layer "F.SilkS")
 			(uuid "804952b4-3100-45b1-bbfd-d32980d1d337")
 			(effects
@@ -22727,7 +22655,7 @@
 		)
 		(property "Value" "120uF"
 			(at 1.25 4.4 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2572a246-7b93-4186-8bf9-6e6a2d90fc56")
 			(effects
 				(font
@@ -24226,11 +24154,11 @@
 	(footprint "Package_TO_SOT_THT:TO-220-15_P2.54x5.08mm_StaggerOdd_Lead4.58mm_Vertical"
 		(layer "F.Cu")
 		(uuid "c27b432b-8148-43ec-bebc-0948bd22ba4f")
-		(at 277.5 182.31 90)
+		(at 277.5 182.28 90)
 		(descr "TO-220-15, Vertical, RM 1.27mm, Multiwatt-15, staggered type-1, see http://www.st.com/resource/en/datasheet/l298.pdf, generated with kicad-footprint-generator TO_SOT_THT_generate.py")
 		(tags "TO-220-15 Vertical RM 1.27mm Multiwatt-15 staggered type-1")
 		(property "Reference" "U1"
-			(at 8.89 -10.53 90)
+			(at 8.89 2 90)
 			(layer "F.SilkS")
 			(uuid "012ed6aa-7659-4c99-8fbf-cbef40a7f893")
 			(effects
@@ -24242,7 +24170,7 @@
 		)
 		(property "Value" "L298HN"
 			(at 8.89 1.85 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "64e2455b-4c27-447d-8295-7f23c133fe1b")
 			(effects
 				(font
@@ -25391,7 +25319,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 8.89 -7.08 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "ca113a27-fbee-41c9-bd93-6fa5b7bfede8")
 			(effects
 				(font
@@ -25585,7 +25513,7 @@
 		(descr "C, Disc series, Radial, pin pitch=5.00mm, diameter*width=4.3*1.9mm^2, Capacitor, http://www.vishay.com/docs/45233/krseries.pdf")
 		(tags "C Disc series Radial pin pitch 5.00mm diameter 4.3mm width 1.9mm Capacitor")
 		(property "Reference" "C4"
-			(at 2.5 -2.2 90)
+			(at 2.5 2 90)
 			(layer "F.SilkS")
 			(uuid "2d27c4e2-3959-4ac0-ab92-38fa1538caec")
 			(effects
@@ -25597,7 +25525,7 @@
 		)
 		(property "Value" "100nF"
 			(at 2.5 2.2 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "078d9178-cfbe-4063-8f65-66a6e9c30c1f")
 			(effects
 				(font
@@ -25699,7 +25627,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 2.5 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6e666587-f747-46f9-ac18-99f4f4979fc6")
 			(effects
 				(font
@@ -25748,7 +25676,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R3"
-			(at 5.08 -2.37 90)
+			(at 12.1375 0 180)
 			(layer "F.SilkS")
 			(uuid "de229def-7780-46d9-8af1-bc4a78456327")
 			(effects
@@ -25760,7 +25688,7 @@
 		)
 		(property "Value" "73.2kΩ"
 			(at 5.08 2.37 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "74bbd130-26a7-4f76-a36d-24da0dc8c27b")
 			(effects
 				(font
@@ -25873,7 +25801,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "2c4267de-1311-46cb-b359-7c5d2e9c6117")
 			(effects
 				(font
@@ -25934,7 +25862,7 @@
 		)
 		(property "Value" "15nF"
 			(at 1.25 2.55 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "8bcf6b11-2c4e-41bf-a63d-57a65a3c0c87")
 			(effects
 				(font
@@ -26056,7 +25984,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 1.25 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "aabcfa53-3a17-43f5-af13-09ceed7c327c")
 			(effects
 				(font
@@ -26105,7 +26033,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J5"
-			(at 0 -2.38 0)
+			(at 2.5 4.04 90)
 			(layer "F.SilkS")
 			(uuid "ed8565ab-75a1-4765-8583-059e2c35b7ba")
 			(effects
@@ -26117,7 +26045,7 @@
 		)
 		(property "Value" "I2C 0 Conn"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "897423a0-1808-4e6b-8bc3-a8be6d904f7d")
 			(effects
 				(font
@@ -26307,7 +26235,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "804a872e-8b60-4833-9077-b31cac1e7b9a")
 			(effects
 				(font
@@ -26380,7 +26308,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D11"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "7114288f-1fc3-431b-82c5-766ca0eb17e0")
 			(effects
@@ -26392,7 +26320,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "00b54f08-743a-42d8-b374-aa94becc7933")
 			(effects
 				(font
@@ -26600,10 +26528,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "29e2bb98-34d7-469d-bbc1-de931d123bb1")
+			(uuid "857da276-9ced-4044-9336-71013a5eebaf")
 			(effects
 				(font
 					(size 1 1)
@@ -26611,10 +26539,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "857da276-9ced-4044-9336-71013a5eebaf")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "29e2bb98-34d7-469d-bbc1-de931d123bb1")
 			(effects
 				(font
 					(size 1 1)
@@ -26665,7 +26593,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R8"
-			(at 5.08 -2.37 0)
+			(at 12.16 0.09 90)
 			(layer "F.SilkS")
 			(uuid "09776954-1b6f-4651-be49-200997b4016b")
 			(effects
@@ -26677,7 +26605,7 @@
 		)
 		(property "Value" "4.7kΩ"
 			(at 5.08 2.37 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "cfa26eae-753c-4ab6-9508-3af318f6efdb")
 			(effects
 				(font
@@ -26790,7 +26718,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "df249422-af1c-4a3e-b3ea-5479ae3d7943")
 			(effects
 				(font
@@ -26851,7 +26779,7 @@
 		)
 		(property "Value" "Motor 2 Encoder"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "90c6ffa2-0e68-42d0-bced-f53f1a99fac3")
 			(effects
 				(font
@@ -27041,7 +26969,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "468c045d-ee5b-4d82-8815-3931d1f3b7f1")
 			(effects
 				(font
@@ -27126,7 +27054,7 @@
 		)
 		(property "Value" "Servo 8 Conn"
 			(at 0 7.54 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "8d842eb6-99ec-46a1-820f-bcf8d8be9192")
 			(effects
 				(font
@@ -27316,7 +27244,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.54 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "bd60e8a2-1357-470b-b09e-77b20598c423")
 			(effects
 				(font
@@ -27378,7 +27306,7 @@
 		(descr "TO-220-15, Vertical, RM 1.27mm, Multiwatt-15, staggered type-1, see http://www.st.com/resource/en/datasheet/l298.pdf, generated with kicad-footprint-generator TO_SOT_THT_generate.py")
 		(tags "TO-220-15 Vertical RM 1.27mm Multiwatt-15 staggered type-1")
 		(property "Reference" "U2"
-			(at 8.89 -10.53 90)
+			(at 8.89 2 90)
 			(layer "F.SilkS")
 			(uuid "2c6e8864-970d-4a68-91cb-47c2040aaf17")
 			(effects
@@ -27390,7 +27318,7 @@
 		)
 		(property "Value" "L298HN"
 			(at 8.89 1.85 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "aa6fdca7-0a75-4c9a-95b1-22b35971f1fc")
 			(effects
 				(font
@@ -28539,7 +28467,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 8.89 -7.08 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "d375333b-aac7-4198-92a8-811a18bce5b4")
 			(effects
 				(font
@@ -28733,7 +28661,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D6"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "65db6fe1-71f1-4fa8-9af9-cc25a6925d40")
 			(effects
@@ -28745,7 +28673,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b3cb5864-b379-4132-ae20-0b5bafc3c45a")
 			(effects
 				(font
@@ -28953,10 +28881,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "3ccfbb9f-080d-48f1-9f3a-ff7d0a4600c4")
+			(uuid "87e318bb-691c-4084-9ffa-b396d6386221")
 			(effects
 				(font
 					(size 1 1)
@@ -28964,10 +28892,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "87e318bb-691c-4084-9ffa-b396d6386221")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "3ccfbb9f-080d-48f1-9f3a-ff7d0a4600c4")
 			(effects
 				(font
 					(size 1 1)
@@ -29018,7 +28946,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J8"
-			(at 0 -2.38 0)
+			(at 2.5 4.12 90)
 			(layer "F.SilkS")
 			(uuid "e5f9564c-44bc-4084-9ff3-c40ce4f20180")
 			(effects
@@ -29030,7 +28958,7 @@
 		)
 		(property "Value" "Stepper 2 Conn"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "439e9586-f309-486a-8487-c3d3fdff7931")
 			(effects
 				(font
@@ -29220,7 +29148,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "41b66bc8-36a6-4a7f-9629-364a4034da96")
 			(effects
 				(font
@@ -29293,7 +29221,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D14"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "bc83b424-8413-4b94-8a84-b8ac2ecf2a43")
 			(effects
@@ -29305,7 +29233,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b4840808-cb4f-4033-8549-603c2e106330")
 			(effects
 				(font
@@ -29513,10 +29441,10 @@
 				)
 			)
 		)
-		(fp_text user "${REFERENCE}"
-			(at 5.47 0 0)
+		(fp_text user "K"
+			(at 0 -2.1 0)
 			(layer "F.Fab")
-			(uuid "2256999e-5048-4842-82a8-f56dd8f84364")
+			(uuid "ce1ba849-035f-44ed-a34d-3115b9d13a26")
 			(effects
 				(font
 					(size 1 1)
@@ -29524,10 +29452,10 @@
 				)
 			)
 		)
-		(fp_text user "K"
-			(at 0 -2.1 0)
-			(layer "F.Fab")
-			(uuid "ce1ba849-035f-44ed-a34d-3115b9d13a26")
+		(fp_text user "${REFERENCE}"
+			(at 5.47 0 0)
+			(layer "User.1")
+			(uuid "2256999e-5048-4842-82a8-f56dd8f84364")
 			(effects
 				(font
 					(size 1 1)
@@ -29578,7 +29506,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.38 90)
+			(at 2.5 1.54 180)
 			(layer "F.SilkS")
 			(uuid "f398ff49-2774-4ae4-9159-58de2be77b7b")
 			(effects
@@ -29590,7 +29518,7 @@
 		)
 		(property "Value" "Motor 3 Conn"
 			(at 0 4.92 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "b9161f7f-9ddb-4de9-a30a-af68a03dda4a")
 			(effects
 				(font
@@ -29780,7 +29708,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 1.27 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "cee2212a-f2f6-48bb-849c-8e649d8e4e83")
 			(effects
 				(font
@@ -29831,7 +29759,7 @@
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J7"
-			(at 0 -2.38 0)
+			(at 2.5 3.62 90)
 			(layer "F.SilkS")
 			(uuid "07fda6b2-c80b-498f-92b8-0d96699a455c")
 			(effects
@@ -29843,7 +29771,7 @@
 		)
 		(property "Value" "Stepper 1 Conn"
 			(at 0 10 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "cf459ed5-039c-469c-ae70-d42f574f7e96")
 			(effects
 				(font
@@ -30033,7 +29961,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "bf46ec9d-2cb7-4908-be6b-87b80c49e3e1")
 			(effects
 				(font
@@ -30106,7 +30034,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, diameter=6.3mm, height=7mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm diameter 6.3mm height 7mm Electrolytic Capacitor")
 		(property "Reference" "C10"
-			(at 1.25 -4.4 270)
+			(at -2.794888 0 0)
 			(layer "F.SilkS")
 			(uuid "e93e0f87-3bfb-4766-bf90-4e5c0e1a6215")
 			(effects
@@ -30118,7 +30046,7 @@
 		)
 		(property "Value" "10uF"
 			(at 1.25 4.4 270)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "44e1bab1-81ac-4a5c-b575-891a590c7e94")
 			(effects
 				(font
@@ -31621,7 +31549,7 @@
 		(descr "Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, length*diameter=5.2*2.7mm^2, https://www.diodes.com/assets/Package-Files/DO-41-Plastic.pdf")
 		(tags "Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm")
 		(property "Reference" "D13"
-			(at 5.08 -2.47 0)
+			(at 5.08 2.5 0)
 			(layer "F.SilkS")
 			(uuid "a5764493-2e1e-4fdf-b120-9768864d9c00")
 			(effects
@@ -31633,7 +31561,7 @@
 		)
 		(property "Value" "1N4007"
 			(at 5.08 2.47 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "90e6e8a2-9a72-49c9-882f-03c1c7f66ffc")
 			(effects
 				(font
@@ -31854,7 +31782,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.47 0 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "a0f07df4-1dd1-4a23-b135-1f92823375da")
 			(effects
 				(font
@@ -31906,7 +31834,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R1"
-			(at 5.08 -2.37 90)
+			(at -1.6375 0 180)
 			(layer "F.SilkS")
 			(uuid "bb6e22d3-fc0e-4014-81fc-0ab7ff227eb5")
 			(effects
@@ -31918,7 +31846,7 @@
 		)
 		(property "Value" "665Ω"
 			(at 5.08 2.37 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "4dc45621-664a-4da8-a699-ca3e0a548995")
 			(effects
 				(font
@@ -32031,7 +31959,7 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 5.08 0 90)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "6770d915-928c-405c-952d-0e90cec099bc")
 			(effects
 				(font
@@ -32080,7 +32008,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J10"
-			(at 0 -2.38 0)
+			(at -2.5 1.54 90)
 			(layer "F.SilkS")
 			(uuid "fefb51b7-0c96-495c-8242-fb774a454d13")
 			(effects
@@ -32092,7 +32020,7 @@
 		)
 		(property "Value" "12V Battery"
 			(at 0 4.92 0)
-			(layer "F.Fab")
+			(layer "User.1")
 			(uuid "ef8dc8d3-834c-44c3-9042-4bcd9714fc8c")
 			(effects
 				(font
