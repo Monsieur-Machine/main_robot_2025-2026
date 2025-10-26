@@ -54,6 +54,18 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
+          "courtyards_overlap|265755000|115705000|340ef544-9676-417b-baaa-aa066f7c9c96|3c6454e2-e8d4-4ef5-89c7-c414158a2096",
+          ""
+        ],
+        [
+          "courtyards_overlap|265755000|139205000|a46a44d0-6f88-4da3-884b-b3f4f04822a3|e49dcefc-c1f0-4f84-a2f2-1daad6774c8a",
+          ""
+        ],
+        [
+          "courtyards_overlap|265755000|92205000|0c3ca70c-f1dc-4764-903f-1b7df7495604|914fbcef-b16d-4eba-9d34-ba6d9014a692",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|195610000|85817500|27f49496-1608-4f67-b770-14d5157c638b|00000000-0000-0000-0000-000000000000",
           ""
         ],
