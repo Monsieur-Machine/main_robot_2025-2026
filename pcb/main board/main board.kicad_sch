@@ -3930,6 +3930,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Switching:LM3150MH"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5290,6 +5397,12 @@
 		(uuid "2c21ef7c-fca5-4859-815e-d31ff2891c7f")
 	)
 	(junction
+		(at 243.84 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d729b41-7cea-4aab-9545-ae2cea1b6bf0")
+	)
+	(junction
 		(at 109.22 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5324,6 +5437,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "608e04e7-4518-4aae-ab99-a47365c10976")
+	)
+	(junction
+		(at 246.38 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65f569ef-3dd5-41c4-a65c-5cc355b8813f")
 	)
 	(junction
 		(at 76.2 39.37)
@@ -5444,6 +5563,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b8a548e1-e7dc-4653-89c9-d57c5b32e256")
+	)
+	(junction
+		(at 248.92 22.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bcabefe7-5756-4598-bbc5-83a049f28649")
 	)
 	(junction
 		(at 25.4 59.69)
@@ -5795,6 +5920,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 76.2) (xy 93.98 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10571c2a-b377-4ebf-aa6d-22dcf40e3880")
+	)
+	(wire
+		(pts
 			(xy 31.75 74.93) (xy 34.29 74.93)
 		)
 		(stroke
@@ -5885,16 +6020,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 88.9) (xy 87.63 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17aca92e-1266-4d27-9bed-89d25b1f3324")
-	)
-	(wire
-		(pts
 			(xy 22.86 58.42) (xy 22.86 59.69)
 		)
 		(stroke
@@ -5935,7 +6060,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 73.66) (xy 87.63 76.2)
+			(xy 96.52 73.66) (xy 96.52 76.2)
 		)
 		(stroke
 			(width 0)
@@ -6055,6 +6180,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 20.32) (xy 238.76 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ca7c7aa-45ae-4315-b4b5-f39759dd4bc9")
+	)
+	(wire
+		(pts
 			(xy 201.93 63.5) (xy 207.01 63.5)
 		)
 		(stroke
@@ -6085,16 +6220,6 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 76.2) (xy 87.63 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2eda2fe4-be31-4e72-a6a2-f7f01850e7ad")
-	)
-	(wire
-		(pts
 			(xy 205.74 146.05) (xy 205.74 140.97)
 		)
 		(stroke
@@ -6122,6 +6247,16 @@
 			(type default)
 		)
 		(uuid "327887fe-a3d8-4412-9e0f-c0adecb9d53d")
+	)
+	(wire
+		(pts
+			(xy 248.92 20.32) (xy 248.92 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "336075ba-09e4-47c3-a517-547ccd72691d")
 	)
 	(wire
 		(pts
@@ -6162,6 +6297,16 @@
 			(type default)
 		)
 		(uuid "3f3fbcf2-1a75-43e2-abc7-26e0b35f4836")
+	)
+	(wire
+		(pts
+			(xy 246.38 22.86) (xy 248.92 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40fbddff-7352-4cf6-8d74-53403a521d6e")
 	)
 	(wire
 		(pts
@@ -6245,6 +6390,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 88.9) (xy 93.98 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4680a624-271c-44eb-8b09-7efdaa2dea61")
+	)
+	(wire
+		(pts
 			(xy 138.43 22.86) (xy 140.97 22.86)
 		)
 		(stroke
@@ -6325,7 +6480,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 78.74) (xy 87.63 86.36)
+			(xy 96.52 78.74) (xy 96.52 86.36)
 		)
 		(stroke
 			(width 0)
@@ -6535,6 +6690,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 22.86) (xy 243.84 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "674c9331-a6c8-41cb-b6c2-c8d12e1c80c6")
+	)
+	(wire
+		(pts
 			(xy 34.29 96.52) (xy 31.75 96.52)
 		)
 		(stroke
@@ -6695,6 +6860,26 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 20.32) (xy 243.84 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "833212fa-5f75-4a33-a1ef-22df79a8a443")
+	)
+	(wire
+		(pts
+			(xy 254 22.86) (xy 254 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83f15a1d-ff8c-4577-b464-d0f210b7f626")
+	)
+	(wire
+		(pts
 			(xy 154.94 146.05) (xy 167.64 146.05)
 		)
 		(stroke
@@ -6712,6 +6897,16 @@
 			(type default)
 		)
 		(uuid "87c3a399-09f6-4530-aa24-eca0535994f4")
+	)
+	(wire
+		(pts
+			(xy 248.92 22.86) (xy 254 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b5bb3cb-0ee5-46f2-b5c0-2425145aaed1")
 	)
 	(wire
 		(pts
@@ -6772,16 +6967,6 @@
 			(type default)
 		)
 		(uuid "91c6174f-47b9-4ffa-bcf6-a5232e757b9f")
-	)
-	(wire
-		(pts
-			(xy 87.63 78.74) (xy 85.09 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92ece01f-79fa-480e-9fc5-0f5cd7142b18")
 	)
 	(wire
 		(pts
@@ -6945,6 +7130,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 78.74) (xy 96.52 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5c2c726-8af7-45fd-9cbe-56ccacc2736e")
+	)
+	(wire
+		(pts
 			(xy 245.11 58.42) (xy 242.57 58.42)
 		)
 		(stroke
@@ -7045,6 +7240,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 86.36) (xy 96.52 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b291f7f2-37cd-43a3-afa9-3081c65c0c0d")
+	)
+	(wire
+		(pts
 			(xy 207.01 88.9) (xy 224.79 88.9)
 		)
 		(stroke
@@ -7082,16 +7287,6 @@
 			(type default)
 		)
 		(uuid "b6be6e94-5ccf-49d8-997f-8ac569a8f983")
-	)
-	(wire
-		(pts
-			(xy 87.63 86.36) (xy 85.09 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba51691b-eceb-4128-bea8-9894d2e183a5")
 	)
 	(wire
 		(pts
@@ -7485,7 +7680,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 88.9) (xy 87.63 91.44)
+			(xy 96.52 88.9) (xy 96.52 91.44)
 		)
 		(stroke
 			(width 0)
@@ -7625,6 +7820,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 22.86) (xy 246.38 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efcafebb-295c-4501-9ba6-305f6891c9a6")
+	)
+	(wire
+		(pts
 			(xy 127 97.79) (xy 124.46 97.79)
 		)
 		(stroke
@@ -7702,6 +7907,16 @@
 			(type default)
 		)
 		(uuid "f7318e7b-839e-4d4c-9098-fbbd8fef72a6")
+	)
+	(wire
+		(pts
+			(xy 246.38 22.86) (xy 246.38 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8700afc-a321-4879-bbae-0c1d1595f18d")
 	)
 	(wire
 		(pts
@@ -9338,8 +9553,75 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5VL")
+		(at 34.29 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03d183aa-cc9c-443e-87eb-b88e38efb439")
+		(property "Reference" "#PWR023"
+			(at 34.29 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5VL"
+			(at 34.29 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 34.29 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5VL\""
+			(at 34.29 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47d8a69a-ce23-462f-9a91-8d7af1087359")
+		)
+		(instances
+			(project "main board"
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 142.24 135.89 90)
+		(at 142.24 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9348,7 +9630,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f979c6b-21dc-4e46-8e28-8174843015b0")
 		(property "Reference" "J14"
-			(at 140.9699 133.35 0)
+			(at 143.5101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9357,7 +9639,7 @@
 			)
 		)
 		(property "Value" "Servo 2 Conn"
-			(at 143.5099 133.35 0)
+			(at 140.9701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9365,7 +9647,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 142.24 135.89 0)
 			(effects
 				(font
@@ -9412,8 +9694,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 80.01 76.2 0)
-		(mirror y)
+		(at 88.9 78.74 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9421,7 +9702,7 @@
 		(dnp no)
 		(uuid "142b0bff-512b-4c16-8a99-d06f8803c32c")
 		(property "Reference" "J10"
-			(at 77.47 76.1999 0)
+			(at 86.36 78.7401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9430,7 +9711,7 @@
 			)
 		)
 		(property "Value" "12V Battery"
-			(at 77.47 78.7399 0)
+			(at 86.36 76.2001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9438,8 +9719,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 80.01 76.2 0)
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
+			(at 88.9 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9448,7 +9729,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 80.01 76.2 0)
+			(at 88.9 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9457,7 +9738,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 80.01 76.2 0)
+			(at 88.9 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9575,7 +9856,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 26.67 91.44 0)
 			(effects
 				(font
@@ -9691,16 +9972,15 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5VP")
+		(lib_id "power:+5VL")
 		(at 34.29 69.85 0)
-		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1b640eb0-c6cb-4d79-a9db-74fbe8e5ea52")
+		(uuid "1bb8c721-d839-4570-aeca-c48a7b751c91")
 		(property "Reference" "#PWR021"
 			(at 34.29 73.66 0)
 			(effects
@@ -9710,7 +9990,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+5VL"
 			(at 34.29 64.77 0)
 			(effects
 				(font
@@ -9736,7 +10016,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+5VL\""
 			(at 34.29 69.85 0)
 			(effects
 				(font
@@ -9746,7 +10026,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "afcb0173-25f9-4102-a641-19cb306d426d")
+			(uuid "d3281d5a-f524-4063-9a41-af12fd8910fc")
 		)
 		(instances
 			(project "main board"
@@ -10049,8 +10329,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 80.01 86.36 0)
-		(mirror y)
+		(at 88.9 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10058,7 +10337,7 @@
 		(dnp no)
 		(uuid "28fdd32d-6a8a-448e-b386-4dc5e5bf4e83")
 		(property "Reference" "J11"
-			(at 77.47 86.3599 0)
+			(at 86.36 88.9001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10067,7 +10346,7 @@
 			)
 		)
 		(property "Value" "BAU"
-			(at 77.47 88.8999 0)
+			(at 86.36 86.3601 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10075,8 +10354,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 80.01 86.36 0)
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
+			(at 88.9 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10085,7 +10364,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 80.01 86.36 0)
+			(at 88.9 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10094,7 +10373,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 80.01 86.36 0)
+			(at 88.9 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10363,7 +10642,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 180.34 135.89 90)
+		(at 180.34 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10372,7 +10652,7 @@
 		(fields_autoplaced yes)
 		(uuid "370827c5-92d8-41f7-a012-62184dd8fb43")
 		(property "Reference" "J16"
-			(at 179.0699 133.35 0)
+			(at 181.6101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10381,7 +10661,7 @@
 			)
 		)
 		(property "Value" "Servo 5 Conn"
-			(at 181.6099 133.35 0)
+			(at 179.0701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10389,7 +10669,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 180.34 135.89 0)
 			(effects
 				(font
@@ -10687,7 +10967,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 26.67 72.39 0)
 			(effects
 				(font
@@ -10805,7 +11085,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 205.74 135.89 90)
+		(at 205.74 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10814,7 +11095,7 @@
 		(fields_autoplaced yes)
 		(uuid "58e34a18-078b-42c1-9510-2ba35ff53dd4")
 		(property "Reference" "J18"
-			(at 204.4699 133.35 0)
+			(at 207.0101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10823,7 +11104,7 @@
 			)
 		)
 		(property "Value" "Servo 7 Conn"
-			(at 207.0099 133.35 0)
+			(at 204.4701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10831,7 +11112,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 205.74 135.89 0)
 			(effects
 				(font
@@ -11012,7 +11293,8 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 87.63 73.66 0)
+		(at 96.52 73.66 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11021,7 +11303,7 @@
 		(fields_autoplaced yes)
 		(uuid "5e0191be-5ec6-468b-b324-82a58def5065")
 		(property "Reference" "#PWR040"
-			(at 87.63 77.47 0)
+			(at 96.52 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11030,7 +11312,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 87.63 68.58 0)
+			(at 96.52 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11038,7 +11320,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 73.66 0)
+			(at 96.52 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11047,7 +11329,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 73.66 0)
+			(at 96.52 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11056,7 +11338,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 87.63 73.66 0)
+			(at 96.52 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11078,7 +11360,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 218.44 135.89 90)
+		(at 218.44 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11087,7 +11370,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ed3d3f0-eb1e-4f63-80a8-de19e9652fbc")
 		(property "Reference" "J19"
-			(at 217.1699 133.35 0)
+			(at 219.7101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11096,7 +11379,7 @@
 			)
 		)
 		(property "Value" "Servo 8 Conn"
-			(at 219.7099 133.35 0)
+			(at 217.1701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11104,7 +11387,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 218.44 135.89 0)
 			(effects
 				(font
@@ -11176,7 +11459,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 265.43 154.94 0)
 			(effects
 				(font
@@ -11367,8 +11650,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 248.92 17.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7167eb4d-6887-44a0-96cd-4f74dd51f818")
+		(property "Reference" "H3"
+			(at 251.46 15.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 251.46 17.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 248.92 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 248.92 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 248.92 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f8819cf-83d2-44db-bee0-56b4e25c2be5")
+		)
+		(instances
+			(project "main board"
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 129.54 135.89 90)
+		(at 129.54 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11377,7 +11728,7 @@
 		(fields_autoplaced yes)
 		(uuid "76318245-594e-41af-801a-7476fa3016ff")
 		(property "Reference" "J13"
-			(at 128.2699 133.35 0)
+			(at 130.8101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11386,7 +11737,7 @@
 			)
 		)
 		(property "Value" "Servo 1 Conn"
-			(at 130.8099 133.35 0)
+			(at 128.2701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11394,7 +11745,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 129.54 135.89 0)
 			(effects
 				(font
@@ -11794,7 +12145,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 154.94 135.89 90)
+		(at 154.94 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11803,7 +12155,7 @@
 		(fields_autoplaced yes)
 		(uuid "83a32b36-0e48-416e-bff6-4c03594e20e5")
 		(property "Reference" "J15"
-			(at 153.6699 133.35 0)
+			(at 156.2101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11812,7 +12164,7 @@
 			)
 		)
 		(property "Value" "Servo 3 Conn"
-			(at 156.2099 133.35 0)
+			(at 153.6701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11820,7 +12172,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 154.94 135.89 0)
 			(effects
 				(font
@@ -11866,18 +12218,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5VP")
-		(at 34.29 88.9 0)
-		(mirror y)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 243.84 17.78 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "87731208-dbab-4d04-864d-4e13377e053a")
-		(property "Reference" "#PWR023"
-			(at 34.29 92.71 0)
+		(uuid "84eb362c-e095-4186-879d-7e9dfddff94f")
+		(property "Reference" "H2"
+			(at 246.38 15.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 246.38 17.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 243.84 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11885,16 +12254,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
-			(at 34.29 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 88.9 0)
+		(property "Datasheet" "~"
+			(at 243.84 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11902,17 +12263,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 34.29 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 34.29 88.9 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 243.84 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11921,12 +12273,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d7a35da7-6a86-44cc-a63b-4305673322c1")
+			(uuid "65661a46-f2dd-41bb-9b73-a59a1d885b0c")
 		)
 		(instances
 			(project "main board"
 				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
-					(reference "#PWR023")
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -12299,7 +12651,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 265.43 140.97 0)
 			(effects
 				(font
@@ -12408,6 +12760,73 @@
 			(project "main board"
 				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
 					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 254 17.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bf86fde-e50f-439b-911f-3e33c4c1dfbd")
+		(property "Reference" "H4"
+			(at 256.54 15.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 256.54 17.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 254 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 254 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 254 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f3b2bf5-5667-4226-abe5-c17cf1bbedd3")
+		)
+		(instances
+			(project "main board"
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -12704,7 +13123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 265.43 127 0)
 			(effects
 				(font
@@ -12845,7 +13264,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
 			(at 265.43 113.03 0)
 			(effects
 				(font
@@ -13030,7 +13449,8 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 87.63 91.44 0)
+		(at 96.52 91.44 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13039,7 +13459,7 @@
 		(fields_autoplaced yes)
 		(uuid "c73cdd44-a0e9-47dd-b118-9dd1f7f68967")
 		(property "Reference" "#PWR041"
-			(at 87.63 96.52 0)
+			(at 96.52 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13048,7 +13468,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 87.503 95.25 0)
+			(at 96.647 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13056,7 +13476,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 92.71 0)
+			(at 96.52 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13065,7 +13485,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 92.71 0)
+			(at 96.52 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13074,7 +13494,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 87.63 91.44 0)
+			(at 96.52 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13346,7 +13766,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 193.04 135.89 90)
+		(at 193.04 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13355,7 +13776,7 @@
 		(fields_autoplaced yes)
 		(uuid "cfb76dad-1a1f-427d-8fab-ef8e47ec1ba2")
 		(property "Reference" "J17"
-			(at 191.7699 133.35 0)
+			(at 194.3101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13364,7 +13785,7 @@
 			)
 		)
 		(property "Value" "Servo 6 Conn"
-			(at 194.3099 133.35 0)
+			(at 191.7701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13372,7 +13793,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 193.04 135.89 0)
 			(effects
 				(font
@@ -13937,6 +14358,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDPWR")
+		(at 246.38 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea2381d7-9491-40d1-b41a-bd694f199b0e")
+		(property "Reference" "#PWR055"
+			(at 246.38 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 246.253 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 246.38 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "176573d5-8971-4872-8593-ecfd03f7d029")
+		)
+		(instances
+			(project "main board"
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5VP")
 		(at 118.11 39.37 0)
 		(unit 1)
@@ -13997,6 +14484,73 @@
 			(project ""
 				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 238.76 17.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1d78408-fcd2-46e0-a2e9-bcd7d9b7a30f")
+		(property "Reference" "H1"
+			(at 241.3 15.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 241.3 17.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 238.76 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 238.76 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "24df010b-6625-4c8f-9c3a-1749fe98f2c2")
+		)
+		(instances
+			(project ""
+				(path "/2b41feff-4875-412f-ac81-a28835b7fe51"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -14136,7 +14690,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 167.64 135.89 90)
+		(at 167.64 135.89 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14145,7 +14700,7 @@
 		(fields_autoplaced yes)
 		(uuid "fab65c82-222b-4abb-ac79-9605d82327ee")
 		(property "Reference" "J12"
-			(at 166.3699 133.35 0)
+			(at 168.9101 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14154,7 +14709,7 @@
 			)
 		)
 		(property "Value" "Servo 4 Conn"
-			(at 168.9099 133.35 0)
+			(at 166.3701 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14162,7 +14717,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical"
 			(at 167.64 135.89 0)
 			(effects
 				(font
