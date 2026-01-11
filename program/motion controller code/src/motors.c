@@ -1,7 +1,8 @@
-#include "include/motors.h"
+#include "headers/motors.h"
 
 #include <pico/stdlib.h>
 #include <hardware/pwm.h>
+#include <headers/robot.h>
 
 const motor_def_t MOTORS_DEFS[] = {
     {0,  4,  5, 0x00},
@@ -116,4 +117,24 @@ void servo_motor_set(servo_motors_enum_t servo_motor, bool close)
 
     // Set PWM to zero //
     pwm_set_gpio_level(servo_motor_def->pwm_pin, close ? servo_motor_def->close_pos : servo_motor_def->open_pos);
+}
+
+void update_motors_from_buffer(void)
+{
+    for(motors_enum_t actual_motor = MOTOR1; actual_motor < NB_MOTORS; actual_motor++)
+    {
+        const motor_def_t *motor_def = &MOTORS_DEFS[actual_motor];
+
+        motor_set(actual_motor, robot.i2c_buffer.buffer[motor_def->buffer_reg]);
+    }
+}
+
+void update_servo_motors_from_buffer(void)
+{
+    for(servo_motors_enum_t actual_servo_motor = SERVO_MOTOR1; actual_servo_motor < NB_SERVO_MOTORS; actual_servo_motor++)
+    {
+        const servo_motor_def_t *servo_motor_def = &SERVO_MOTORS_DEFS[actual_servo_motor];
+
+        servo_motor_set(actual_servo_motor, robot.i2c_buffer.buffer[servo_motor_def->buffer_reg]);
+    }
 }

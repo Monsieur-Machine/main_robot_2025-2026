@@ -6,7 +6,7 @@ project(main_controller C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
+#set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
 
 # Définir explicitement la carte comme Pico W
 set(PICO_BOARD pico_w)
@@ -19,18 +19,19 @@ pico_sdk_init()
 add_executable(main_controller
   src/main.c
   src/robot.c
-  src/motors.c
-  src/gyro.c
+  src/i2c/motors.c
+  src/i2c/gyro.c
   src/motion_control.c
-  src/i2c_master.c
-  src/wifi_operator.c
-  src/udp_client.c
-  src/udp_payload.c
+  src/i2c/i2c_master.c
+  src/i2c/mcp23017.c
+  src/wifi/wifi_operator.c
+  src/wifi/udp_client.c
+  src/wifi/udp_payload.c
 )
 
 target_include_directories(main_controller PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/src
-    ${CMAKE_CURRENT_LIST_DIR}/src/include
+    ${CMAKE_CURRENT_LIST_DIR}/src/
+    ${CMAKE_CURRENT_LIST_DIR}/src/wifi/headers/
 )
 
 target_link_libraries(main_controller

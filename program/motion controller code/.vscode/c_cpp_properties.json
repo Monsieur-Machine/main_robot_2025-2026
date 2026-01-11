@@ -1,18 +1,13 @@
 {
-    "env": {
-        "myDefaultIncludePath": [
-            "${env:PICO_SDK_PATH}/src/**/include/",
-            "${workspaceFolder}/build/generated/pico_base/"
-        ],
-        "myCompilerPath": "/usr/bin/arm-none-eabi-gcc"
-    },
     "configurations": [
         {
             "name": "Linux",
             "intelliSenseMode": "linux-gcc-arm",
             "includePath": [
-                "${myDefaultIncludePath}",
-                "${workspaceFolder}/build/"
+                "${env:PICO_SDK_PATH}/src/**/include/",
+                "${workspaceFolder}/build/generated/pico_base/",
+                "${workspaceFolder}/build/",
+                "${workspaceFolder}/src/"
             ],
             "compilerPath": "/usr/bin/arm-none-eabi-gcc",
             "cStandard": "c11",

@@ -14,15 +14,19 @@ add_executable(motion_controller
   src/main.c
   src/robot.c
   src/motors.c
-  src/i2c_slave.c
-  src/i2c_buffer.c
+  src/i2c/i2c_buffer.c
+  src/i2c/i2c_slave.c
+)
+
+target_include_directories(motion_controller PRIVATE
+  ${CMAKE_CURRENT_LIST_DIR}/src/
 )
 
 target_link_libraries(motion_controller
+  pico_stdlib
+  hardware_uart
   hardware_i2c
   hardware_pwm
-  hardware_uart
-  pico_stdlib
 )
 
 pico_enable_stdio_usb(motion_controller 1)

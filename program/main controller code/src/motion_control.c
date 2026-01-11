@@ -1,9 +1,9 @@
-#include "include/motion_control.h"
+#include "headers/motion_control.h"
 
 #include <stdio.h>
 #include <math.h>
-#include "include/motors.h"
-#include "include/robot.h"
+#include "i2c/headers/motors.h"
+#include "headers/robot.h"
 
 #define GAIN_KD 10
 

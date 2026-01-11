@@ -9,7 +9,7 @@
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include <stdbool.h>
-#include "include/robot.h"
+#include "headers/robot.h"
 
 robot_t robot;
 

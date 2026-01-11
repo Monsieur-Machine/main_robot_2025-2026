@@ -1,24 +1,18 @@
 {
-    "env": {
-        "myDefaultIncludePath": [
-            "${workspaceFolder}/src/include/",
-            "${env:PICO_SDK_PATH}/src/**/include/",
-            "${env:PICO_SDK_PATH}/lib/**/include/",
-            "${workspaceFolder}/build/generated/pico_base/"
-        ],
-        "myCompilerPath": "/usr/bin/arm-none-eabi-gcc"
-    },
-
     "configurations": [
         {
             "name": "Linux",
             "intelliSenseMode": "linux-gcc-arm",
             "includePath": [
-                "${myDefaultIncludePath}"
+                "${env:PICO_SDK_PATH}/src/**/include/",
+                "${env:PICO_SDK_PATH}/lib/**/include/",
+                "${env:PICO_SDK_PATH}/lib/**/src/",
+                "${workspaceFolder}/build/generated/pico_base/",
+                "${workspaceFolder}/src/",
+                "${workspaceFolder}/src/wifi/headers/"
             ],
             "compilerPath": "/usr/bin/arm-none-eabi-gcc",
             "cStandard": "c11",
-            "cppStandard": "c++17",
             "browse": {
                 "path": [
                     "${workspaceFolder}"

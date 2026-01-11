@@ -1,23 +1,35 @@
 {
     "tasks": [
         {
+            "label": "CMake & Make",
             "type": "shell",
-            "command": "cd build; cmake -DPICO_BOARD=pico_w ..; make",
-            "label": "CMake in build/",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": false
+            "group": "build",
+
+            "command": "mkdir -p build && cd build && cmake ../ && make",
+
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
             }
         },
         {
-            "type": "shell",
-            "command": "cd build; cmake -DPICO_BOARD=pico_w ..; make Flash",
             "label": "CMake & Make & Flash",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "type": "shell",
+            "group": "build",
+
+            "command": "mkdir -p build && cd build && cmake ../ && make Flash",
+
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
             }
         }
     ],
