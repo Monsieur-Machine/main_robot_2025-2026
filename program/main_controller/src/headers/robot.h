@@ -5,8 +5,10 @@
 #include "i2c/headers/mcp23017.h"
 #include "i2c/headers/gyro.h"
 #include "motion_control.h"
+#include "wifi/headers/udp_client.h"
 
 typedef struct robot_t {
+    udp_client_t udp_client;
     mcp23017_data_t mcp23017_data;
     gyro_data_t gyro_data;
     motion_control_data_t motion_control_data;

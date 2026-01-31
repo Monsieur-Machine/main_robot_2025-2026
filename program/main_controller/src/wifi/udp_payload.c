@@ -3,6 +3,11 @@
 #include "i2c/headers/motors.h"
 #include "headers/robot.h"
 
+#define UDP_PAYLOAD_ANGLE_L_BYTE 0x00
+#define UDP_PAYLOAD_ANGLE_H_BYTE 0x01
+#define UDP_PAYLOAD_X_AXIS_SPEED_BYTE 0x02
+#define UDP_PAYLOAD_Y_AXIS_SPEED_BYTE 0x03
+
 void __not_in_flash_func(udp_client_message_handler)(uint8_t *payload, uint16_t len, const ip_addr_t *addr, u16_t port)
 {
     if(len != 16) return;

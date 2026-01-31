@@ -3,13 +3,10 @@
 #include <pico/stdlib.h>
 #include <pico/cyw43_arch.h>
 #include <time.h>
-#include <pico/mutex.h>
 #include "i2c/headers/i2c_master.h"
 #include "i2c/headers/mcp23017.h"
 #include "wifi/headers/udp_client.h"
 #include "wifi/headers/wifi_operator.h"
-
-auto_init_mutex(wifi_mutex);
 
 void robot_init(void)
 {
@@ -20,29 +17,27 @@ void robot_init(void)
     if(cyw43_arch_init())
         robot.is_running = false;
 
-    mutex_enter_blocking(&wifi_mutex);
     cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
-    mutex_exit(&wifi_mutex);
 
-    //i2c_master_init();
+    i2c_master_init();
 
-    //mcp23017_init();
+    mcp23017_init();
 
-    //gyro_init();
+    gyro_init();
 
     //gyro_calibrate();
 
-    //init_motion_control();
+    //motion_control_init();
 
-    init_wifi_operator();
-    udp_client_init();
+    wifi_operator_init();
+
+    if(udp_client_init())
+        robot.is_running = false;
 
     // Initialisation ended
     for(uint i = 0, led_state = true; i < 5; i++)
     {
-        mutex_enter_blocking(&wifi_mutex);
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
-        mutex_exit(&wifi_mutex);
 
         sleep_ms(100);
 
@@ -65,9 +60,7 @@ static inline void update_time(void)
     {
         elapsed_time = 0.0f;
 
-        mutex_enter_blocking(&wifi_mutex);
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
-        mutex_exit(&wifi_mutex);
 
         led_state = !led_state;
     }
@@ -75,9 +68,7 @@ static inline void update_time(void)
 
 void robot_handle_inputs_outputs(void)
 {
-    mutex_enter_blocking(&wifi_mutex);
     cyw43_arch_poll();
-    mutex_exit(&wifi_mutex);
 
     update_time();
 
@@ -95,5 +86,6 @@ void robot_handle_inputs_outputs(void)
 void robot_deinit(void)
 {
     udp_client_deinit();
-    //i2c_master_deinit();
+    cyw43_arch_deinit();
+    i2c_master_deinit();
 }

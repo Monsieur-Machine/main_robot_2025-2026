@@ -1,8 +1,8 @@
 #ifndef WIFI_OPERATOR_H
 #define WIFI_OPERATOR_H
 
-#define WIFI_OPERATOR_SSID "RiombotiqueAP"
-#define WIFI_OPERATOR_PASSWORD "x4ptSLpPuJFcpzbLEhDoZ5J7dz"
+#define WIFI_OPERATOR_SSID "CoolAccessPointName"
+#define WIFI_OPERATOR_PASSWORD "TheBestPasswordEver"
 
 void init_wifi_operator(void);
 
