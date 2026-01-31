@@ -6,7 +6,6 @@
 
 #define I2C_MCP23017_ADDRESS 0x20
 
-
 typedef struct mcp23017_data_t {
     uint8_t gpio_state[2];
 } mcp23017_data_t;

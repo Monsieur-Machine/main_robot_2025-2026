@@ -7,7 +7,7 @@
 
 #define GAIN_KD 10
 
-void init_motion_control(void)
+void motion_control_init(void)
 {
     robot.motion_control_data.angle = 0;
     robot.motion_control_data.x_axis_speed = 0;

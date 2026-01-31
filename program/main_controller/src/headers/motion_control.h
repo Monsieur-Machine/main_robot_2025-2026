@@ -13,7 +13,7 @@ typedef struct motion_control_data_t {
 } motion_control_data_t;
 
 // Init values for motion control
-void init_motion_control(void);
+void motion_control_init(void);
 // Update motion control buffer from motion control data and gyro data
 void i2c_update_motion_control(void);
 // Update servo motors from motion control data

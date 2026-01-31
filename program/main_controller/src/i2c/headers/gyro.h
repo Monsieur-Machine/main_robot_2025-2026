@@ -1,7 +1,7 @@
 #ifndef GYRO_H
 #define GYRO_H
 
-#define I2C_GYRO_ADDRESS 0x6b
+#define I2C_GYRO_ADDRESS 0x6B
 
 typedef struct gyro_data_t {
     float x_offset, y_offset, z_offset;
