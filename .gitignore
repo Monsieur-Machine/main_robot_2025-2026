@@ -1,2 +1,3 @@
 program/main_controller/build
+program/main_controller/src/wifi/headers/wifi_operator.h
 program/motion_controller/build
