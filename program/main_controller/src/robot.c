@@ -14,22 +14,23 @@ void robot_init(void)
 
     stdio_init_all();
 
-    if(cyw43_arch_init())
+    if(cyw43_arch_init_with_country(CYW43_COUNTRY_FRANCE))
         robot.is_running = false;
 
     cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
 
-    i2c_master_init();
+    //i2c_master_init();
 
-    mcp23017_init();
+    //mcp23017_init();
 
-    gyro_init();
+    //gyro_init();
 
     //gyro_calibrate();
 
     //motion_control_init();
 
-    wifi_operator_init();
+    if(wifi_operator_init())
+        robot.is_running = false;
 
     if(udp_client_init())
         robot.is_running = false;

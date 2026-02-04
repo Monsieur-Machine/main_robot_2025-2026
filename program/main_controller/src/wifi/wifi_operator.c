@@ -5,18 +5,20 @@
 #include <lwip/netif.h>
 #include <lwip/ip4_addr.h>
 
-void wifi_operator_init(void)
+int wifi_operator_init(void)
 {
-    // Mode client
+    if(cyw43_wifi_pm(&cyw43_state, CYW43_NO_POWERSAVE_MODE))
+    {
+        puts("CYW43 no powersave mode failed");
+        return -1;
+    }
+
+    // Station mode
     cyw43_arch_enable_sta_mode();
 
-    // Désactiver le mode d'économie d'énergie
-    cyw43_wifi_pm(&cyw43_state, CYW43_NO_POWERSAVE_MODE);
-
-    // Tentativs de connexion
     for(int error_code = 1; error_code; )
     {
-        puts("WiFi connection attempt");
+        printf("WiFi connection attempt to \"%s\"\n", WIFI_OPERATOR_SSID);
 
         error_code = cyw43_arch_wifi_connect_timeout_ms(WIFI_OPERATOR_SSID, WIFI_OPERATOR_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 10000);
 
@@ -43,5 +45,5 @@ void wifi_operator_init(void)
         }
     }
 
-    puts("Connexion successfully etablished !");
+    puts("STA mode activated");
 }

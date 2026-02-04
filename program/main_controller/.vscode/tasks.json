@@ -5,7 +5,7 @@
             "type": "shell",
             "group": "build",
 
-            "command": "mkdir -p build && cd build && cmake ../ && make",
+            "command": "mkdir -p build && cd build && cmake ../ && make -j $(nproc)",
 
             "presentation": {
                 "echo": true,
@@ -21,7 +21,7 @@
             "type": "shell",
             "group": "build",
 
-            "command": "mkdir -p build && cd build && cmake ../ && make Flash",
+            "command": "mkdir -p build && cd build && cmake ../ && make -j $(nproc) Flash",
 
             "presentation": {
                 "echo": true,

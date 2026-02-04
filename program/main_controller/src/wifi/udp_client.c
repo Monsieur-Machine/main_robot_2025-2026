@@ -1,14 +1,18 @@
 #include "headers/udp_client.h"
 
 #include <stdio.h>
-#include "headers/udp_payload.h"
 #include "headers/robot.h"
 
+void __not_in_flash_func(message_callback)(uint8_t *payload, uint16_t len, const ip_addr_t *addr)
+{
+    // RECEIVE ALL CONTROLLER DATA
+}
+
 // Default callback func
-static void __not_in_flash_func(default_message_callback)(uint8_t *payload, uint16_t len)
+static inline void default_message_callback(uint8_t *payload, uint16_t len)
 {
     for(uint i = 0; i < len; i++)
-        printf("payload[%d]=%d | ", i, payload[i]);
+        printf("payload[%d]=%d%s", i, payload[i], ((i + 1) == len) ? "" : " | ");
 
     puts("\n");
 }

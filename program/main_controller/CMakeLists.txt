@@ -24,7 +24,6 @@ add_executable(main_controller
   src/i2c/mcp23017.c
   src/wifi/wifi_operator.c
   src/wifi/udp_client.c
-  src/wifi/udp_payload.c
 )
 
 target_include_directories(main_controller PRIVATE
@@ -36,7 +35,6 @@ target_link_libraries(main_controller
   pico_stdlib
   hardware_i2c
   hardware_pwm
-  hardware_uart
   pico_cyw43_arch_lwip_poll
 )
 
