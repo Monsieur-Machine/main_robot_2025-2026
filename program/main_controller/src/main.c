@@ -1,7 +1,7 @@
-/*                      *\
-    Copyrights 2025
-            Riombotique
-\*                      */
+//
+//  Copyrights 2025
+//          Poivron Robotique
+//
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
 *   Code du RPI Pico principale gérant les differentes entrées-sorties.             *

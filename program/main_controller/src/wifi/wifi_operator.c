@@ -46,4 +46,6 @@ int wifi_operator_init(void)
     }
 
     puts("STA mode activated");
+
+    return 0;
 }

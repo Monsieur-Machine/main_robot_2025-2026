@@ -36,7 +36,7 @@ void robot_init(void)
         robot.is_running = false;
 
     // Initialisation ended
-    for(uint i = 0, led_state = true; i < 5; i++)
+    for(uint8_t i = 0, led_state = true; i < 5; i++)
     {
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
 
@@ -44,6 +44,7 @@ void robot_init(void)
 
         led_state = !led_state;
     }
+    printf("robot.is_running : %d\n", robot.is_running);
 }
 
 static inline void update_time(void)
