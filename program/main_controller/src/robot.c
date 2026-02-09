@@ -44,43 +44,41 @@ void robot_init(void)
 
         led_state = !led_state;
     }
-    printf("robot.is_running : %d\n", robot.is_running);
 }
 
 static inline void update_time(void)
 {
-    static float last_time = 0.0;
-    float start_time = (float)clock() * 1000.0f / (float)CLOCKS_PER_SEC;
-    robot.delta_time_ms = start_time - last_time;
-    last_time = start_time;
+    static float last_time_ms = 0.0;
+    float start_time_ms = (float)clock() * 1000.0f / (float)CLOCKS_PER_SEC;
+    robot.delta_time_ms = start_time_ms - last_time_ms;
+    last_time_ms = start_time_ms;
 
-    static float elapsed_time = 0.0f;
-    elapsed_time += robot.delta_time_ms;
+    static float elapsed_time_ms = 0.0f;
+    elapsed_time_ms += robot.delta_time_ms;
 
     static bool led_state = false;
-    if(elapsed_time >= 1000.0f)
+    if(elapsed_time_ms >= 1000.0f)
     {
-        elapsed_time = 0.0f;
-
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
 
+        elapsed_time_ms = 0.0f;
         led_state = !led_state;
     }
 }
 
 void robot_handle_inputs_outputs(void)
 {
-    cyw43_arch_poll();
-
     update_time();
 
-    //gyro_update();
+    cyw43_arch_poll();
 
-    //i2c_update_motion_control();
+    gyro_update();
+
+    //update_motion_control();
 
     //i2c_update_servo_motors();
 
-    //mcp23017_update();
+    mcp23017_update();
 
     tight_loop_contents();
 }
@@ -88,6 +86,8 @@ void robot_handle_inputs_outputs(void)
 void robot_deinit(void)
 {
     udp_client_deinit();
+
     cyw43_arch_deinit();
+
     i2c_master_deinit();
 }
