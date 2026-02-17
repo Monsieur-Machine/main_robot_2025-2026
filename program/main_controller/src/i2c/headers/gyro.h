@@ -1,7 +1,7 @@
 #ifndef GYRO_H
 #define GYRO_H
 
-#define I2C_GYRO_ADDRESS 0x6B
+#define I2C_GYRO_ADDRESS 0x68
 
 typedef struct gyro_data_t {
     float x_offset, y_offset, z_offset;
@@ -9,7 +9,7 @@ typedef struct gyro_data_t {
 } gyro_data_t;
 
 // Check if gyro has correctly initialised and configure it for simple use
-void gyro_init(void);
+int gyro_init(void);
 // Calibrate gyro
 void gyro_calibrate(void);
 // Update gyro data

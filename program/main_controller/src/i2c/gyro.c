@@ -5,6 +5,7 @@
 
 #include "headers/gyro.h"
 
+#include <stdio.h>
 #include <stdint.h>
 #include "headers/i2c_master.h"
 #include "headers/robot.h"
@@ -12,16 +13,65 @@
 // #include <stdio.h>
 
 #define SAMPLE_MIN_ELAPSED_TIME_MS 1.0f
-#define DPS_PER_DIGIT 0.00875f
+#define DPS_PER_DIGIT 1000.0f / 65535.0f // FS_SEL = 2
 
-void gyro_init(void)
+int gyro_init(void)
 {
     // Reset gyro
     const uint8_t PWR_MGMT_REG = 0x6B;
     const uint8_t PWR_MGMT_CONFIG = 0b10000000; // Reset bit set to 1
-    uint8_t buf[] = {PWR_MGMT_REG, PWR_MGMT_CONFIG};
-    i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 2, false);
 
+    uint8_t buf[2] = {PWR_MGMT_REG, PWR_MGMT_CONFIG};
+    if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 2, false) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable during initialisation");
+        return -1;
+    }
+
+    sleep_ms(10);
+
+    // Remove reset bit
+    buf[1] = 0x00;
+    if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 2, false) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable during inititalisation");
+        return -1;
+    }
+
+    sleep_ms(10);
+
+    // Verify device identification
+    const uint8_t WHO_AM_I_REG = 0x75;
+    buf[0] = WHO_AM_I_REG;
+    if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 1, true) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable during initialisation");
+    }
+    if(i2c_read_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 1, false) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable during initialisation");
+        return -1;
+    }
+
+    if(buf[0] != 0x68)
+    {
+        puts("Device is not the expected gyro");
+        printf("Have : 0x%x\nExpected : 0x68\n", buf[0]);
+        return -1;
+    }
+
+    // Write gyro config
+    const uint8_t GYRO_CONFIG_REG = 0x1B;
+    const uint8_t GYRO_CONFIG = 0b00010000; // FS_SEL = 2
+    buf[0] = GYRO_CONFIG_REG;
+    buf[1] = GYRO_CONFIG;
+    if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, buf, 2, false) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable during initialisation");
+        return -1;
+    }
+
+    // Reset gyro data
     robot.gyro_data.x_offset = 0.0f;
     robot.gyro_data.y_offset = 0.0f;
     robot.gyro_data.z_offset = 0.0f;
@@ -30,20 +80,27 @@ void gyro_init(void)
     robot.gyro_data.y_angle = 0.0f;
     robot.gyro_data.z_angle = 0.0f;
 
-    sleep_ms(100);
+    return 0;
 }
 
-static inline void __attribute__((always_inline)) gyro_read(int16_t *x, int16_t *y, int16_t *z)
+static inline void __attribute__((always_inline)) gyro_read_raw(int16_t *x, int16_t *y, int16_t *z)
 {
     const uint8_t GYRO_XOUT_H_REG = 0x43;
 
     uint8_t data[6];
-    i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, &GYRO_XOUT_H_REG, 1, true);
-    i2c_read_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, data, 6, false);
+    if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, &GYRO_XOUT_H_REG, 1, true) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable");
+    }
 
-    *x = (int16_t)((data[1] << 8) | data[0]);
-    *y = (int16_t)((data[3] << 8) | data[2]);
-    *z = (int16_t)((data[5] << 8) | data[4]);
+    if(i2c_read_blocking(I2C_MASTER_INSTANCE, I2C_GYRO_ADDRESS, data, 6, false) == PICO_ERROR_GENERIC)
+    {
+        puts("Gyro is not reachable");
+    }
+
+    *x = (int16_t)((data[0] << 8) | data[1]);
+    *y = (int16_t)((data[2] << 8) | data[3]);
+    *z = (int16_t)((data[4] << 8) | data[5]);
 }
 
 void gyro_calibrate(void)
@@ -55,13 +112,13 @@ void gyro_calibrate(void)
 
     for(uint i = 0; i < NB_SAMPLES; i++)
     {
-        gyro_read(&x, &y, &z);
+        gyro_read_raw(&x, &y, &z);
 
         x_sum += x;
         y_sum += y;
         z_sum += z;
 
-        sleep_us(SAMPLE_MIN_ELAPSED_TIME_MS * 1000);
+        sleep_ms(SAMPLE_MIN_ELAPSED_TIME_MS);
 
         //printf(">cal_x:%d\n", x);
         //printf(">cal_y:%d\n", y);
@@ -80,7 +137,7 @@ void gyro_calibrate(void)
 static inline void __attribute__((always_inline)) gyro_get_dps(float *x_dps, float *y_dps, float *z_dps)
 {
     int16_t x, y, z;
-    gyro_read(&x, &y, &z);
+    gyro_read_raw(&x, &y, &z);
 
     *x_dps = x * DPS_PER_DIGIT;
     *y_dps = y * DPS_PER_DIGIT;

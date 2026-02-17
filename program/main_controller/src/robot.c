@@ -19,22 +19,23 @@ void robot_init(void)
 
     cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
 
-    //i2c_master_init();
+    i2c_master_init();
 
-    //mcp23017_init();
+    mcp23017_init();
 
-    //gyro_init();
+    if(gyro_init())
+        robot.is_running = false;
 
-    //gyro_calibrate();
+    gyro_calibrate();
 
     //motion_control_init();
-
+/*
     if(wifi_operator_init())
         robot.is_running = false;
 
     if(udp_client_init())
         robot.is_running = false;
-
+*/
     // Initialisation ended
     for(uint8_t i = 0, led_state = true; i < 5; i++)
     {

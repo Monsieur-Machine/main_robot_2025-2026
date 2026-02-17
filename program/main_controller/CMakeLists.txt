@@ -18,9 +18,9 @@ add_executable(main_controller
   src/main.c
   src/robot.c
   src/i2c/motors.c
-  src/i2c/gyro.c
-  src/motion_control.c
   src/i2c/i2c_master.c
+  src/motion_control.c
+  src/i2c/gyro.c
   src/i2c/mcp23017.c
   src/wifi/wifi_operator.c
   src/wifi/udp_client.c
@@ -45,6 +45,5 @@ pico_add_extra_outputs(main_controller)
 
 add_custom_target(Flash
     DEPENDS main_controller
-
     COMMAND sudo picotool load -f ${PROJECT_BINARY_DIR}/main_controller.uf2
 )
