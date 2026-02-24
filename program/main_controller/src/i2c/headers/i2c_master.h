@@ -6,7 +6,7 @@
 #define I2C_MASTER_SDA_PIN 16
 #define I2C_MASTER_SCL_PIN 17
 #define I2C_MASTER_INSTANCE i2c0
-#define I2C_MASTER_BAUD_RATE 200 * 1000
+#define I2C_MASTER_BAUD_RATE 300 * 1000
 
 // Init master i2c
 void i2c_master_init(void);

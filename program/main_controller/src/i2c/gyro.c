@@ -12,8 +12,8 @@
 
 // #include <stdio.h>
 
-#define SAMPLE_MIN_ELAPSED_TIME_MS 1.0f
-#define DPS_PER_DIGIT 1000.0f / 65535.0f // FS_SEL = 2
+#define SAMPLE_MIN_ELAPSED_TIME_MS 2.0f
+#define DPS_PER_DIGIT 1000.0f / 65535.0f * 2.0f // FS_SEL = 2 // Why * 2 ? Idk it works...
 
 int gyro_init(void)
 {
