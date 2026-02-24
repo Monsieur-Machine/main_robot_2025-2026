@@ -28,14 +28,14 @@ void robot_init(void)
 
     gyro_calibrate();
 
-    //motion_control_init();
-/*
+    motion_control_init();
+
     if(wifi_operator_init())
         robot.is_running = false;
 
     if(udp_client_init())
         robot.is_running = false;
-*/
+
     // Initialisation ended
     for(uint8_t i = 0, led_state = true; i < 5; i++)
     {
@@ -75,9 +75,7 @@ void robot_handle_inputs_outputs(void)
 
     gyro_update();
 
-    //update_motion_control();
-
-    //i2c_update_servo_motors();
+    motion_control_update();
 
     mcp23017_update();
 

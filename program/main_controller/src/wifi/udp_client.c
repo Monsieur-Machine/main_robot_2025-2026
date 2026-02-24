@@ -1,11 +1,15 @@
 #include "headers/udp_client.h"
 
 #include <stdio.h>
+#include <string.h>
 #include "headers/robot.h"
 
-void __not_in_flash_func(message_callback)(uint8_t *payload, uint16_t len, const ip_addr_t *addr)
+static inline void message_callback(uint8_t *payload, uint16_t len)
 {
-    // RECEIVE ALL CONTROLLER DATA
+    if(len != DATA_LEN)
+        return;
+
+    memcpy(robot.udp_client.data.raw, payload, len);
 }
 
 // Default callback func
@@ -17,7 +21,7 @@ static inline void default_message_callback(uint8_t *payload, uint16_t len)
     puts("\n");
 }
 
-static void __not_in_flash_func(udp_receive_callback)(void *arg, struct udp_pcb *pcb, struct pbuf *p, const ip_addr_t *addr, u16_t port)
+static inline void udp_receive_callback(void *arg, struct udp_pcb *pcb, struct pbuf *p, const ip_addr_t *addr, u16_t port)
 {
     robot.udp_client.message_callback((uint8_t *)p->payload, p->len);
     pbuf_free(p);
@@ -25,8 +29,8 @@ static void __not_in_flash_func(udp_receive_callback)(void *arg, struct udp_pcb 
 
 int udp_client_init(void)
 {
-    //udp_client.message_callback = udp_client_message_handler;
-    robot.udp_client.message_callback = default_message_callback;
+    robot.udp_client.message_callback = message_callback;
+    //robot.udp_client.message_callback = default_message_callback;
 
     robot.udp_client.pcb = udp_new();
     if(robot.udp_client.pcb == NULL)

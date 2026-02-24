@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2021 Valentin Milea <valentin.milea@gmail.com>
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "headers/i2c_slave.h"
 
 #include <hardware/gpio.h>
@@ -25,14 +19,14 @@ void i2c_slave_buffer_handler(i2c_inst_t *i2c, i2c_slave_event_t event)
         else
         {
             // save into memory
-            robot.i2c_buffer.buffer[robot.i2c_buffer.buffer_reg] = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
+            robot.i2c_buffer.buffer.raw[robot.i2c_buffer.buffer_reg] = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
             robot.i2c_buffer.buffer_reg++;
         }
         break;
 
       case I2C_SLAVE_REQUEST: // master is requesting data
         // load from memory
-        i2c_write_byte_raw(I2C_SLAVE_INSTANCE, robot.i2c_buffer.buffer[robot.i2c_buffer.buffer_reg]);
+        i2c_write_byte_raw(I2C_SLAVE_INSTANCE, robot.i2c_buffer.buffer.raw[robot.i2c_buffer.buffer_reg]);
         robot.i2c_buffer.buffer_reg++;
         break;
 

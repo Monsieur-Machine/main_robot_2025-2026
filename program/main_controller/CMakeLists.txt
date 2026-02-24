@@ -17,9 +17,9 @@ pico_sdk_init()
 add_executable(main_controller
   src/main.c
   src/robot.c
-  src/i2c/motors.c
-  src/i2c/i2c_master.c
+  src/motors.c
   src/motion_control.c
+  src/i2c/i2c_master.c
   src/i2c/gyro.c
   src/i2c/mcp23017.c
   src/wifi/wifi_operator.c

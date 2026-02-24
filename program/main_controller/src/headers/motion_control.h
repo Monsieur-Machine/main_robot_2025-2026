@@ -2,21 +2,16 @@
 #define MOTION_CONTROL_H
 
 #include <stdint.h>
-#include "i2c/headers/motors.h"
 
 #define I2C_MOTION_CONTROLLER_ADDRESS 0x09
 
 typedef struct motion_control_data_t {
-    int16_t angle;
-    int8_t x_axis_speed;
-    int8_t y_axis_speed;
+    int16_t target_speed;
+    float target_angle;
 } motion_control_data_t;
 
-// Init values for motion control
 void motion_control_init(void);
-// Update motion control buffer from motion control data and gyro data
-void i2c_update_motion_control(void);
-// Update servo motors from motion control data
-void i2c_update_servo_motors(void);
+
+void motion_control_update(void);
 
 #endif // MOTION_CONTROL_H

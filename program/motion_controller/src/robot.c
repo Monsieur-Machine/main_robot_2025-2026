@@ -17,8 +17,8 @@ void robot_init(void)
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
     gpio_put(PICO_DEFAULT_LED_PIN, true);
 
-    //init_motors();
-    //init_servo_motors();
+    motors_init();
+
     init_i2c_slave();
 
     // Initialisation ended
@@ -51,14 +51,19 @@ static inline void update_time(void)
 
         led_state = !led_state;
     }
-
 }
 
 void robot_handle_inputs_outputs(void)
 {
     update_time();
 
-    //update_motors_from_buffer();
+    motors_update();
+
+    //printf(">motor1_speed:%d\n", robot.i2c_buffer.buffer.hard.motor1_speed);
+    //printf(">motor2_speed:%d\n", robot.i2c_buffer.buffer.hard.motor2_speed);
+    sleep_ms(5);
+
+    tight_loop_contents();
 }
 
 void robot_deinit(void)

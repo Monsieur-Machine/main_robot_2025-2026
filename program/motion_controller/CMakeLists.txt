@@ -6,8 +6,6 @@ project(motion_controller C CXX ASM)
 set(CMAKE_C_STNDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
-
 pico_sdk_init()
 
 add_executable(motion_controller
@@ -23,7 +21,6 @@ target_include_directories(motion_controller PRIVATE
 
 target_link_libraries(motion_controller
   pico_stdlib
-  hardware_uart
   hardware_i2c
   pico_i2c_slave
   hardware_pwm

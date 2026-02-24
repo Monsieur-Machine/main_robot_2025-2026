@@ -2,66 +2,100 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "i2c/headers/motors.h"
+#include <hardware/i2c.h>
+#include "i2c/headers/i2c_master.h"
+#include "headers/motors.h"
 #include "headers/robot.h"
 
+#define ANGLE_PER_S 30.0f
 #define GAIN_KD 10
+
+#define MSG_LEN sizeof(uint8_t) * 2
+#define MSG_DELAY_MS 5.0f
 
 void motion_control_init(void)
 {
-    robot.motion_control_data.angle = 0;
-    robot.motion_control_data.x_axis_speed = 0;
-    robot.motion_control_data.y_axis_speed = 0;
+    robot.motion_control_data.target_speed = 0;
+    robot.motion_control_data.target_angle = 0.0f;
 }
 
-void i2c_update_motion_control(void)
+void motion_control_update(void)
 {
-    // Motion control work as follow :
-    //  - Motors are rotated on-board at 45*.
-    //  - we calculate the error of the targeted angle and the actual angle
-    //  - First we estimate the targeted speed on irl board on X and Y axis
-    //  - Then we calculate motors speed from targeted speed and the error
-    //  - And we put limits because motors speed are send by i2c on 1 byte
+    // First we update motion control data from received data
+    robot.motion_control_data.target_angle += (float)robot.udp_client.data.hard.inputs.joystick_y / 256.0f * robot.delta_time_ms / 1000.0f * ANGLE_PER_S;
+    robot.motion_control_data.target_speed =  robot.udp_client.data.hard.inputs.joystick_x;
 
-    float actual_angle = robot.gyro_data.x_angle - 45.0f;
+    // Go to nearest 90* angle if L button pressed
+    if(robot.udp_client.data.hard.inputs.buttons.button_l)
+    {
+        float angle_offset = fmodf(robot.motion_control_data.target_angle, 90.0f);
 
-    float target_angle = (float)robot.motion_control_data.angle - 45.0f;
-    float target_angle_radian = target_angle / 180.0f * M_PI;
+        if(fabsf(angle_offset) < 45.0f)
+        {
+            robot.motion_control_data.target_angle -= angle_offset;
+        }
+        else
+        {
+            robot.motion_control_data.target_angle += (90.0f - abs(angle_offset)) * ((angle_offset > 0.0f) - (angle_offset < 0.0f));
+        }
+    }
 
-    float error = target_angle - actual_angle;
-    if(error > 180) error -= 360;
-    if(error < -180) error += 360;
+    // Wrap angle
+    while(robot.motion_control_data.target_angle >  180.0f) robot.motion_control_data.target_angle -= 360.0f;
+    while(robot.motion_control_data.target_angle < -180.0f) robot.motion_control_data.target_angle += 360.0f;
+
+    //printf(">target_angle:%f\n", robot.motion_control_data.target_angle);
+    //printf(">target_speed:%d\n", robot.motion_control_data.target_speed);
+
+    float target_angle_radian = robot.motion_control_data.target_angle / 180.0f * M_PI;
+
+    float error = robot.motion_control_data.target_angle - robot.gyro_data.x_angle;
+    while(error > 180) error -= 360;
+    while(error < -180) error += 360;
 
     float correction = error * GAIN_KD;
 
-    float target_x_axis_speed = cosf(target_angle_radian) * robot.motion_control_data.x_axis_speed +
-                                    sinf(target_angle_radian) * robot.motion_control_data.y_axis_speed;
-    float target_y_axis_speed = cosf(target_angle_radian) * robot.motion_control_data.y_axis_speed -
-                                    sinf(target_angle_radian) * robot.motion_control_data.x_axis_speed;
+    float motor1_speed = (float)robot.motion_control_data.target_speed - correction;
+    float motor2_speed = (float)robot.motion_control_data.target_speed + correction;
 
-    int motor1_speed = target_x_axis_speed + (int)correction;
-    int motor2_speed = target_x_axis_speed - (int)correction;
-    int motor3_speed = target_y_axis_speed + (int)correction;
-    int motor4_speed = target_y_axis_speed - (int)correction;
+    if(motor1_speed > 255) motor1_speed = 255;
+    if(motor2_speed > 255) motor2_speed = 255;
 
-    if(motor1_speed > 127) motor1_speed = 127;
-    if(motor2_speed > 127) motor2_speed = 127;
-    if(motor3_speed > 127) motor3_speed = 127;
-    if(motor4_speed > 127) motor4_speed = 127;
+    if(motor1_speed < -255) motor1_speed = -255;
+    if(motor2_speed < -255) motor2_speed = -255;
 
-    if(motor1_speed < -128) motor1_speed = -128;
-    if(motor2_speed < -128) motor2_speed = -128;
-    if(motor3_speed < -128) motor3_speed = -128;
-    if(motor4_speed < -128) motor4_speed = -128;
+    // Set dir pins
+    motor_set_dir(MOTOR1, (int16_t)motor1_speed);
+    motor_set_dir(MOTOR2, (int16_t)motor2_speed);
 
-    i2c_set_motor(MOTOR1, motor1_speed);
-    i2c_set_motor(MOTOR2, motor2_speed);
-    i2c_set_motor(MOTOR3, motor3_speed);
-    i2c_set_motor(MOTOR4, motor4_speed);
-}
+    static float elapsed_time_ms = 0.0f;
+    elapsed_time_ms += robot.delta_time_ms;
 
-void i2c_update_servo_motors(void)
-{
-    //for(servo_motors_enum_t actual_servo_motor = SERVO_MOTOR1; actual_servo_motor < NB_SERVO_MOTORS; actual_servo_motor++)
-    //    i2c_set_servo_motor(actual_servo_motor, robot.motion_control_data.servo_motors_pos[actual_servo_motor]);
+    if(elapsed_time_ms >= MSG_DELAY_MS)
+    {
+        // Send motors speed via I2C
+        union {
+            struct {
+                uint8_t motor1_speed;
+                uint8_t motor2_speed;
+            } hard;
+
+            uint8_t raw[MSG_LEN];
+        } data;
+
+        data.hard.motor1_speed = (uint8_t)abs((int)motor1_speed);
+        data.hard.motor2_speed = (uint8_t)abs((int)motor2_speed);
+
+        uint8_t reg = 0x00;
+
+        if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_MOTION_CONTROLLER_ADDRESS, &reg, 1, true) == PICO_ERROR_GENERIC)
+        {
+            puts("Motion controller not reachable");
+        }
+
+        if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_MOTION_CONTROLLER_ADDRESS, data.raw, MSG_LEN, false) == PICO_ERROR_GENERIC)
+        {
+            puts("Motion controller not reachable");
+        }
+    }
 }
