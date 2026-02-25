@@ -4,37 +4,40 @@
 #include <hardware/i2c.h>
 #include <pico/i2c_slave.h>
 #include <headers/robot.h>
-
-void i2c_slave_buffer_handler(i2c_inst_t *i2c, i2c_slave_event_t event)
+static struct
 {
-    switch(event)
-    {
-      case I2C_SLAVE_RECEIVE: // master has written some data
-        if(!robot.i2c_buffer.buffer_reg_written)
-        {
+    uint8_t mem[256];
+    uint8_t mem_address;
+    bool mem_address_written;
+} context;
+
+int nb_messages = 0;
+
+// Our handler is called from the I2C ISR, so it must complete quickly. Blocking calls /
+// printing to stdio may interfere with interrupt handling.
+static void i2c_slave_handler(i2c_inst_t *i2c, i2c_slave_event_t event) {
+    switch (event) {
+    case I2C_SLAVE_RECEIVE: // master has written some data
+        if (!context.mem_address_written) {
             // writes always start with the memory address
-            robot.i2c_buffer.buffer_reg = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
-            robot.i2c_buffer.buffer_reg_written = true;
-        }
-        else
-        {
+            context.mem_address = i2c_read_byte_raw(i2c);
+            context.mem_address_written = true;
+        } else {
             // save into memory
-            robot.i2c_buffer.buffer.raw[robot.i2c_buffer.buffer_reg] = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
-            robot.i2c_buffer.buffer_reg++;
+            context.mem[context.mem_address] = i2c_read_byte_raw(i2c);
+            context.mem_address++;
         }
         break;
-
-      case I2C_SLAVE_REQUEST: // master is requesting data
+    case I2C_SLAVE_REQUEST: // master is requesting data
         // load from memory
-        i2c_write_byte_raw(I2C_SLAVE_INSTANCE, robot.i2c_buffer.buffer.raw[robot.i2c_buffer.buffer_reg]);
-        robot.i2c_buffer.buffer_reg++;
+        i2c_write_byte_raw(i2c, context.mem[context.mem_address]);
+        context.mem_address++;
         break;
-
-      case I2C_SLAVE_FINISH: // master has signalled Stop / Restart
-        robot.i2c_buffer.buffer_reg_written = false;
+    case I2C_SLAVE_FINISH: // master has signalled Stop / Restart
+        context.mem_address_written = false;
+        nb_messages++;
         break;
-
-      default:
+    default:
         break;
     }
 }
@@ -49,7 +52,7 @@ void init_i2c_slave(void)
 
     i2c_init(I2C_SLAVE_INSTANCE, 0);
     // New SDK method to init i2c slave
-    i2c_slave_init(I2C_SLAVE_INSTANCE, I2C_SLAVE_ADDRESS, &i2c_slave_buffer_handler);
+    i2c_slave_init(I2C_SLAVE_INSTANCE, I2C_SLAVE_ADDRESS, i2c_slave_handler);
 }
 
 void deinit_i2c_slave(void)
@@ -60,4 +63,12 @@ void deinit_i2c_slave(void)
 
     // New SDK method to reset i2c slave
     i2c_slave_deinit(I2C_SLAVE_INSTANCE);
+}
+
+uint8_t get_vitesse_moteur_1(void){
+    return context.mem[0];
+}
+
+uint8_t get_vitesse_moteur_2(void){
+    return context.mem[1];
 }

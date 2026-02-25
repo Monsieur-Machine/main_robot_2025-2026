@@ -1,8 +1,10 @@
 #include "headers/motors.h"
+#include "i2c/headers/i2c_slave.h"
 
 #include <pico/stdlib.h>
 #include <hardware/pwm.h>
 #include <headers/robot.h>
+
 
 #include <stdio.h>
 
@@ -32,7 +34,10 @@ void motors_init(void)
         const uint SLICE_NUM = pwm_gpio_to_slice_num(MOTOR_PWM_PIN);
 
         gpio_set_function(MOTOR_PWM_PIN, GPIO_FUNC_PWM);
+
+        pwm_set_clkdiv(SLICE_NUM, 255);
         pwm_set_wrap(SLICE_NUM, 256);
+
         pwm_set_enabled(SLICE_NUM, true);
 
         motor_set_speed(motor, 0);
@@ -48,6 +53,6 @@ void motor_set_speed(motors_enum_t motor, uint8_t value)
 
 void motors_update(void)
 {
-    motor_set_speed(MOTOR1, robot.i2c_buffer.buffer.hard.motor1_speed);
-    motor_set_speed(MOTOR2, robot.i2c_buffer.buffer.hard.motor2_speed);
+    motor_set_speed(MOTOR1, get_vitesse_moteur_1());
+    motor_set_speed(MOTOR2, get_vitesse_moteur_2());
 }

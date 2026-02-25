@@ -86,6 +86,12 @@ void motion_control_update(void)
         data.hard.motor1_speed = (uint8_t)abs((int)motor1_speed);
         data.hard.motor2_speed = (uint8_t)abs((int)motor2_speed);
 
+        data.hard.motor1_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
+        data.hard.motor2_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
+
+        motor_set_dir(MOTOR1, (int16_t)robot.udp_client.data.hard.inputs.joystick_x);
+        motor_set_dir(MOTOR2, (int16_t)robot.udp_client.data.hard.inputs.joystick_x);
+
         uint8_t reg = 0x00;
 
         if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_MOTION_CONTROLLER_ADDRESS, &reg, 1, true) == PICO_ERROR_GENERIC)

@@ -30,12 +30,29 @@ void robot_init(void)
 
     motion_control_init();
 
-    if(wifi_operator_init())
-        robot.is_running = false;
+    if(wifi_operator_init()){
+        while(1){
+            printf("No Wifi\n");
+            robot.is_running = false;
+            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
+            sleep_ms(50);
+            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, false);
+            sleep_ms(50);
+        }
+    }
+        
 
-    if(udp_client_init())
-        robot.is_running = false;
-
+    if(udp_client_init()){
+        while(1){
+            printf("No UDP\n");
+            robot.is_running = false;
+            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
+            sleep_ms(50);
+            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, false);
+            sleep_ms(50);
+        }
+    }
+        
     // Initialisation ended
     for(uint8_t i = 0, led_state = true; i < 5; i++)
     {
@@ -45,6 +62,7 @@ void robot_init(void)
 
         led_state = !led_state;
     }
+    printf(">robot_running:%d\n", robot.is_running);
 }
 
 static inline void update_time(void)
@@ -69,6 +87,7 @@ static inline void update_time(void)
 
 void robot_handle_inputs_outputs(void)
 {
+    static bool led_state=false;
     update_time();
 
     cyw43_arch_poll();
@@ -79,7 +98,10 @@ void robot_handle_inputs_outputs(void)
 
     mcp23017_update();
 
-    tight_loop_contents();
+    sleep_ms(200);
+    led_state= !led_state;
+    uint8_t data[] = {0x02, led_state};
+    int ret = i2c_write_blocking(I2C_MASTER_INSTANCE, 0x09, data, 2, false);
 }
 
 void robot_deinit(void)

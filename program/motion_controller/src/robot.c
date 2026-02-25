@@ -43,9 +43,9 @@ static inline void update_time(void)
     static double elapsed_time = 0.0;
     elapsed_time += robot.delta_time_ms;
 
-    if(elapsed_time >= 1000.0)
+    if(nb_messages >= 10)
     {
-        elapsed_time = 0.0;
+        nb_messages = 0;
 
         gpio_put(PICO_DEFAULT_LED_PIN, led_state);
 
@@ -55,15 +55,19 @@ static inline void update_time(void)
 
 void robot_handle_inputs_outputs(void)
 {
+    static bool led_state=false;
     update_time();
 
     motors_update();
 
-    //printf(">motor1_speed:%d\n", robot.i2c_buffer.buffer.hard.motor1_speed);
-    //printf(">motor2_speed:%d\n", robot.i2c_buffer.buffer.hard.motor2_speed);
-    sleep_ms(5);
+    printf(">motor1_speed:%d\n", get_vitesse_moteur_1());
+    printf(">motor2_speed:%d\n", get_vitesse_moteur_2());
+    sleep_ms(200);
+    led_state= !led_state;
+    uint8_t data[] = {0x02, led_state};
+    int ret = i2c_write_blocking(i2c0, 0x09, data, 2, false);
 
-    tight_loop_contents();
+    //tight_loop_contents();
 }
 
 void robot_deinit(void)

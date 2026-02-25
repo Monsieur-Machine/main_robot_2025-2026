@@ -27,7 +27,7 @@ target_link_libraries(motion_controller
 )
 
 pico_enable_stdio_usb(motion_controller 1)
-pico_enable_stdio_uart(motion_controller 1)
+pico_enable_stdio_uart(motion_controller 0)
 
 pico_add_extra_outputs(motion_controller)
 
