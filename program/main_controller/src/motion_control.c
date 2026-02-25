@@ -73,16 +73,11 @@ void motion_control_update(void)
 
     if(elapsed_time_ms >= MSG_DELAY_MS)
     {
+        elapsed_time_ms = 0;
         // Send motors speed via I2C
         uint8_t data[5];
 
         data[0] = 0x00; /// registre
-
-        //data.motor1_speed = (uint8_t)abs((int)motor1_speed);
-        //data.motor2_speed = (uint8_t)abs((int)motor2_speed);
-
-        //data.motor1_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
-        //data.motor2_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
 
         data[1] = (uint8_t)abs((int)motor1_speed);
         data[2] = (uint8_t)abs((int)motor2_speed);
@@ -94,15 +89,5 @@ void motion_control_update(void)
         {
             puts("Motion controller not reachable");
         }
-        /*
-        if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_MOTION_CONTROLLER_ADDRESS, &reg, 1, true) == PICO_ERROR_GENERIC)
-        {
-            puts("Motion controller not reachable");
-        }
-
-        if(i2c_write_blocking(I2C_MASTER_INSTANCE, I2C_MOTION_CONTROLLER_ADDRESS, data.raw, MSG_LEN, false) == PICO_ERROR_GENERIC)
-        {
-            puts("Motion controller not reachable");
-        }*/
     }
 }
