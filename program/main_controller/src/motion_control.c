@@ -84,11 +84,9 @@ void motion_control_update(void)
         //data.motor1_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
         //data.motor2_speed = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
 
-        data[1] = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
-        data[2] = (uint8_t)abs((int)robot.udp_client.data.hard.inputs.joystick_x);
+        data[1] = (uint8_t)abs((int)motor1_speed);
+        data[2] = (uint8_t)abs((int)motor2_speed);
 
-        motor_set_dir(MOTOR1, (int16_t)robot.udp_client.data.hard.inputs.joystick_x);
-        motor_set_dir(MOTOR2, (int16_t)robot.udp_client.data.hard.inputs.joystick_x);
 
         uint8_t reg = 0x00;
         
