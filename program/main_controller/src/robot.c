@@ -2,6 +2,7 @@
 
 #include <pico/stdlib.h>
 #include <pico/cyw43_arch.h>
+#include <pico/time.h>
 #include <time.h>
 #include "i2c/headers/i2c_master.h"
 #include "i2c/headers/mcp23017.h"
@@ -88,6 +89,8 @@ static inline void update_time(void)
 void robot_handle_inputs_outputs(void)
 {
     static bool led_state=false;
+    static uint32_t temps_ms_old =0, timer_200_ms=0;
+    uint32_t temps_ms;
     update_time();
 
     cyw43_arch_poll();
@@ -97,11 +100,16 @@ void robot_handle_inputs_outputs(void)
     motion_control_update();
 
     mcp23017_update();
-
-    sleep_ms(200);
-    led_state= !led_state;
-    uint8_t data[] = {0x02, led_state};
-    int ret = i2c_write_blocking(I2C_MASTER_INSTANCE, 0x09, data, 2, false);
+    
+    temps_ms = to_ms_since_boot(get_absolute_time());
+    timer_200_ms += temps_ms - temps_ms_old;
+    temps_ms_old = temps_ms;
+    if(timer_200_ms > 200){
+        timer_200_ms = 0;
+        led_state= !led_state;
+        uint8_t data[] = {0x02, led_state};
+        int ret = i2c_write_blocking(I2C_MASTER_INSTANCE, 0x09, data, 2, false);
+    }
 }
 
 void robot_deinit(void)
