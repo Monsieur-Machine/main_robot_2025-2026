@@ -17,7 +17,7 @@ void robot_init(void)
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
     gpio_put(PICO_DEFAULT_LED_PIN, true);
 
-    motors_init();
+    //motors_init();
 
     init_i2c_slave();
 
@@ -42,15 +42,6 @@ static inline void update_time(void)
 
     static double elapsed_time = 0.0;
     elapsed_time += robot.delta_time_ms;
-
-    if(nb_messages >= 10)
-    {
-        nb_messages = 0;
-
-        gpio_put(PICO_DEFAULT_LED_PIN, led_state);
-
-        led_state = !led_state;
-    }
 }
 
 void robot_handle_inputs_outputs(void)
