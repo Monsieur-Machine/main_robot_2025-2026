@@ -7,8 +7,8 @@
 #include "headers/motors.h"
 #include "headers/robot.h"
 
-#define ANGLE_PER_S 30.0f
-#define GAIN_KD 10
+#define ANGLE_PER_S 90.0f
+#define GAIN_KP 10
 
 #define MSG_LEN sizeof(uint8_t) * 2
 #define MSG_DELAY_MS 5.0f
@@ -44,7 +44,6 @@ void motion_control_update(void)
     while(robot.motion_control_data.target_angle >  180.0f) robot.motion_control_data.target_angle -= 360.0f;
     while(robot.motion_control_data.target_angle < -180.0f) robot.motion_control_data.target_angle += 360.0f;
 
-    //printf(">target_angle:%f\n", robot.motion_control_data.target_angle);
     //printf(">target_speed:%d\n", robot.motion_control_data.target_speed);
 
     float target_angle_radian = robot.motion_control_data.target_angle / 180.0f * M_PI;
@@ -53,7 +52,18 @@ void motion_control_update(void)
     while(error > 180) error -= 360;
     while(error < -180) error += 360;
 
-    float correction = error * GAIN_KD;
+    float correction = error * GAIN_KP;
+
+    /*printf(">target_angle:%f\n", robot.motion_control_data.target_angle);
+    printf(">current_angle:%f\n", robot.gyro_data.x_angle);
+    printf(">correction:%f\n", correction);*/
+
+    /*if(correction > 20 && correction < 150){
+        correction = 150;
+    }
+    if(correction < -20 && correction > -150){
+        correction = 150;
+    }*/
 
     float motor1_speed = (float)robot.motion_control_data.target_speed - correction;
     float motor2_speed = (float)robot.motion_control_data.target_speed + correction;
