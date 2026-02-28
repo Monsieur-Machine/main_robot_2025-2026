@@ -3,10 +3,10 @@
 #include <pico/types.h>
 #include "i2c/headers/mcp23017.h"
 
-#define MOTOR1_DIR1_MCP23017_GPIO 12
-#define MOTOR1_DIR2_MCP23017_GPIO 13
-#define MOTOR2_DIR1_MCP23017_GPIO 14
-#define MOTOR2_DIR2_MCP23017_GPIO 15
+#define MCP23017_MOTOR1_DIR1_GPIO 12
+#define MCP23017_MOTOR1_DIR2_GPIO 13
+#define MCP23017_MOTOR2_DIR1_GPIO 14
+#define MCP23017_MOTOR2_DIR2_GPIO 15
 
 void motor_set_dir(motors_t motor, int16_t value)
 {
@@ -16,16 +16,16 @@ void motor_set_dir(motors_t motor, int16_t value)
     switch(motor)
     {
       case MOTOR1:
-        gpio_dir1_pin = MOTOR1_DIR1_MCP23017_GPIO;
-        gpio_dir2_pin = MOTOR1_DIR2_MCP23017_GPIO;
+        gpio_dir1_pin = MCP23017_MOTOR1_DIR1_GPIO;
+        gpio_dir2_pin = MCP23017_MOTOR1_DIR2_GPIO;
         break;
 
       case MOTOR2:
-        gpio_dir1_pin = MOTOR2_DIR1_MCP23017_GPIO;
-        gpio_dir2_pin = MOTOR2_DIR2_MCP23017_GPIO;
+        gpio_dir1_pin = MCP23017_MOTOR2_DIR1_GPIO;
+        gpio_dir2_pin = MCP23017_MOTOR2_DIR2_GPIO;
         break;
 
-    default:
+      default:
         break;
     }
 

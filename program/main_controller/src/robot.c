@@ -20,6 +20,7 @@ void robot_init(void)
 
     cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
 
+    // I2C and devices
     i2c_master_init();
 
     mcp23017_init();
@@ -31,31 +32,15 @@ void robot_init(void)
 
     motion_control_init();
 
-    if(wifi_operator_init()){
-        while(1){
-            printf("No Wifi\n");
-            robot.is_running = false;
-            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
-            sleep_ms(50);
-            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, false);
-            sleep_ms(50);
-        }
-    }
-        
+    // WiFi
+    if(wifi_operator_init())
+        robot.is_running = false;
 
-    if(udp_client_init()){
-        while(1){
-            printf("No UDP\n");
-            robot.is_running = false;
-            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, true);
-            sleep_ms(50);
-            cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, false);
-            sleep_ms(50);
-        }
-    }
-        
-    // Initialisation ended
-    for(uint8_t i = 0, led_state = true; i < 5; i++)
+    if(udp_client_init())
+        robot.is_running = false;
+
+    // Initialisation ended, loop forever if inititalisation failed
+    for(uint i = 0, led_state = false; robot.is_running ? (i < 5) : true; i++)
     {
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
 
@@ -63,7 +48,6 @@ void robot_init(void)
 
         led_state = !led_state;
     }
-    printf(">robot_running:%d\n", robot.is_running);
 }
 
 static inline void update_time(void)
@@ -76,21 +60,18 @@ static inline void update_time(void)
     static float elapsed_time_ms = 0.0f;
     elapsed_time_ms += robot.delta_time_ms;
 
-    static bool led_state = false;
     if(elapsed_time_ms >= 1000.0f)
     {
-        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, led_state);
+        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, robot.motion_control_data.led_state);
 
         elapsed_time_ms = 0.0f;
-        led_state = !led_state;
+
+        robot.motion_control_data.led_state = !robot.motion_control_data.led_state;
     }
 }
 
-void robot_handle_inputs_outputs(void)
+void robot_update(void)
 {
-    static bool led_state=false;
-    static uint32_t temps_ms_old =0, timer_200_ms=0;
-    uint32_t temps_ms;
     update_time();
 
     cyw43_arch_poll();
@@ -99,17 +80,11 @@ void robot_handle_inputs_outputs(void)
 
     motion_control_update();
 
+    motion_control_send();
+
     mcp23017_update();
-    
-    temps_ms = to_ms_since_boot(get_absolute_time());
-    timer_200_ms += temps_ms - temps_ms_old;
-    temps_ms_old = temps_ms;
-    if(timer_200_ms > 200){
-        timer_200_ms = 0;
-        led_state= !led_state;
-        uint8_t data[] = {0x02, led_state};
-        int ret = i2c_write_blocking(I2C_MASTER_INSTANCE, 0x09, data, 2, false);
-    }
+
+    tight_loop_contents();
 }
 
 void robot_deinit(void)

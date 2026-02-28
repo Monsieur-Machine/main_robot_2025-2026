@@ -18,7 +18,7 @@ int main(void)
 
     while(robot.is_running)
     {
-        robot_handle_inputs_outputs();
+        robot_update();
     }
 
     robot_deinit();

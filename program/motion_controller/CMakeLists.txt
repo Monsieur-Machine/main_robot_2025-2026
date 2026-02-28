@@ -13,6 +13,7 @@ add_executable(motion_controller
   src/robot.c
   src/i2c/i2c_slave.c
   src/motors.c
+  src/servos.c
 )
 
 target_include_directories(motion_controller PRIVATE

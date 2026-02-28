@@ -1,14 +1,13 @@
 #include "headers/motors.h"
-#include "i2c/headers/i2c_slave.h"
 
 #include <pico/stdlib.h>
 #include <hardware/pwm.h>
-#include <headers/robot.h>
+#include "headers/robot.h"
 
+#define MOTOR1_PWM_PIN 9
+#define MOTOR2_PWM_PIN 8
 
-#include <stdio.h>
-
-static inline uint get_motor_pwm_pin(motors_enum_t motor)
+static inline uint get_motor_pwm_pin(motors_t motor)
 {
     switch(motor)
     {
@@ -23,10 +22,16 @@ static inline uint get_motor_pwm_pin(motors_enum_t motor)
     }
 }
 
+static inline void motor_set_speed(motors_t motor, uint8_t value)
+{
+    uint MOTOR_PWM_PIN = get_motor_pwm_pin(motor);
+    pwm_set_gpio_level(MOTOR_PWM_PIN, (uint16_t)value);
+}
+
 // Init all motors defined in the MOTORS_DEF array
 void motors_init(void)
 {
-    for(motors_enum_t motor = MOTOR1; motor < NB_MOTORS; motor++)
+    for(motors_t motor = MOTOR1; motor < NB_MOTORS; motor++)
     {
         // Init PWM
         const uint MOTOR_PWM_PIN = get_motor_pwm_pin(motor);
@@ -44,15 +49,8 @@ void motors_init(void)
     }
 }
 
-// Set [motor] in motor_enum_t at [value] between 0 and 255
-void motor_set_speed(motors_enum_t motor, uint8_t value)
-{
-    uint MOTOR_PWM_PIN = get_motor_pwm_pin(motor);
-    pwm_set_gpio_level(MOTOR_PWM_PIN, (uint16_t)value);
-}
-
 void motors_update(void)
 {
-    motor_set_speed(MOTOR1, get_vitesse_moteur_1());
-    motor_set_speed(MOTOR2, get_vitesse_moteur_2());
+    motor_set_speed(MOTOR1, robot.i2c_buffer.buffer[I2C_BUFFER_MOTOR1_SPEED]);
+    motor_set_speed(MOTOR2, robot.i2c_buffer.buffer[I2C_BUFFER_MOTOR2_SPEED]);
 }

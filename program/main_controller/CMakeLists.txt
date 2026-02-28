@@ -18,6 +18,7 @@ add_executable(main_controller
   src/main.c
   src/robot.c
   src/motors.c
+  src/servos.c
   src/motion_control.c
   src/i2c/i2c_master.c
   src/i2c/gyro.c

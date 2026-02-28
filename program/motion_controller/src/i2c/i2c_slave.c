@@ -9,38 +9,35 @@
 #include <hardware/gpio.h>
 #include <hardware/i2c.h>
 #include "pico/i2c_slave.h"
-
-#include <stdio.h>
-
-extern i2c_buffer_t i2c_buffer;
+#include "headers/robot.h"
 
 void i2c_slave_buffer_handler(i2c_inst_t *i2c, i2c_slave_event_t event)
 {
     switch(event)
     {
       case I2C_SLAVE_RECEIVE: // master has written some data
-        if(!i2c_buffer.buffer_reg_written)
+        if(!robot.i2c_buffer.buffer_reg_written)
         {
             // writes always start with the memory address
-            i2c_buffer.buffer_reg = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
-            i2c_buffer.buffer_reg_written = true;
+            robot.i2c_buffer.buffer_reg = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
+            robot.i2c_buffer.buffer_reg_written = true;
         }
         else
         {
             // save into memory
-            i2c_buffer.buffer[i2c_buffer.buffer_reg] = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
-            i2c_buffer.buffer_reg++;
+            robot.i2c_buffer.buffer[robot.i2c_buffer.buffer_reg] = i2c_read_byte_raw(I2C_SLAVE_INSTANCE);
+            robot.i2c_buffer.buffer_reg++;
         }
         break;
 
       case I2C_SLAVE_REQUEST: // master is requesting data
         // load from memory
-        i2c_write_byte_raw(I2C_SLAVE_INSTANCE, i2c_buffer.buffer[i2c_buffer.buffer_reg]);
-        i2c_buffer.buffer_reg++;
+        i2c_write_byte_raw(I2C_SLAVE_INSTANCE, robot.i2c_buffer.buffer[robot.i2c_buffer.buffer_reg]);
+        robot.i2c_buffer.buffer_reg++;
         break;
 
       case I2C_SLAVE_FINISH: // master has signalled Stop / Restart
-        i2c_buffer.buffer_reg_written = false;
+        robot.i2c_buffer.buffer_reg_written = false;
         break;
 
       default:
@@ -69,12 +66,4 @@ void deinit_i2c_slave(void)
 
     // New SDK method to reset i2c slave
     i2c_slave_deinit(I2C_SLAVE_INSTANCE);
-}
-
-uint8_t get_vitesse_moteur_1(void){
-  return i2c_buffer.buffer[0];
-}
-
-uint8_t get_vitesse_moteur_2(void){
-  return i2c_buffer.buffer[1];
 }

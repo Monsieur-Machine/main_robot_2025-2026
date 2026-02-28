@@ -25,7 +25,4 @@ void init_i2c_slave(void);
 // Deinit i2c slave
 void deinit_i2c_slave(void);
 
-uint8_t get_vitesse_moteur_1(void);
-uint8_t get_vitesse_moteur_2(void);
-
 #endif // I2C_SLAVE_H
